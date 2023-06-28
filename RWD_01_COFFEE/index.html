@@ -6,6 +6,9 @@
     <title>커피에반하다</title>
     <!-- link css -->
     <link rel="stylesheet" href="/style.css" />
+    <!-- script -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/script.js"></script>
   </head>
   <body>
     <!-- header -->
@@ -14,8 +17,9 @@
         <a href="#none"
           ><img src="/images/header-logo.png" alt="커피에반하다"
         /></a>
-        <nav>
-          <ul class="gnb-menu">
+        <!--pc버전 네비게이션-->
+        <nav class="pc-nav">
+          <ul class="gnb-pc-main-menu">
             <li><a href="#none">커피에반하다</a></li>
             <li><a href="#none">메뉴</a></li>
             <li><a href="#none"> 매장안내 </a></li>
@@ -23,47 +27,121 @@
             <li><a href="#none">커뮤니티</a></li>
             <li><a href="#none">프랜차이즈</a></li>
           </ul>
-          <div class="sub-menu-list">
-            <ul class="sub-menu">
-              <li><a href="#none">브랜드스토리</a></li>
-              <li><a href="#none">커피스토리</a></li>
-              <li><a href="#none">아카데미</a></li>
-              <li><a href="#none">R&D</a></li>
-              <li><a href="#none">연혁</a></li>
-              <li><a href="#none">오시는길</a></li>
-            </ul>
-            <ul class="sub-menu">
-              <li><a href="#none">커피에반하다</a></li>
-              <li><a href="#none">스마트카페</a></li>
-              <li><a href="#none">커피에반하다24</a></li>
-            </ul>
-            <ul class="sub-menu">
-              <li><a href="#none">매장 찾기</a></li>
-              <li><a href="#none">신규매장</a></li>
-              <li><a href="#none">오픈예정매장</a></li>
-            </ul>
-            <ul class="sub-menu">
-              <li><a href="#none">톨게이트APP</a></li>
-              <li><a href="#none">FAQ</a></li>
-            </ul>
-            <ul class="sub-menu">
-              <li><a href="#none">이벤트</a></li>
-              <li><a href="#none">커반소식</a></li>
-              <li><a href="#none">영상</a></li>
-              <li><a href="#none">SNS</a></li>
-              <li><a href="#none">고객의 소리</a></li>
-            </ul>
-            <ul class="sub-menu">
-              <li><a href="#none">커피에반하다</a></li>
-              <li><a href="#none">스마트카페</a></li>
-              <li><a href="#none">개설문의</a></li>
-              <li><a href="#none">창업설명회</a></li>
-              <li><a href="#none">FAQ</a></li>
-            </ul>
-          </div>
+        </nav>
+        <!--태블릿, 모바일 버전 네비게이션-->
+        <div class="tablet-nav tablet-drawer-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <nav class="tablet-nav tablet-gnb-menu-list">
+          <ul class="tablet-gnb-menu">
+            <li>
+              <a href="#none">커피에반하다</a>
+              <ul class="tablet-sub-menu">
+                <li><a href="#none">브랜드스토리</a></li>
+                <li><a href="#none">커피스토리</a></li>
+                <li><a href="#none">아카데미</a></li>
+                <li><a href="#none">R&D</a></li>
+                <li><a href="#none">연혁</a></li>
+                <li><a href="#none">오시는길</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#none">메뉴</a>
+              <ul class="tablet-sub-menu">
+                <li><a href="#none">커피에반하다</a></li>
+                <li><a href="#none">스마트카페</a></li>
+                <li><a href="#none">커피에반하다24</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#none">매장안내</a>
+              <ul class="tablet-sub-menu">
+                <li><a href="#none">매장 찾기</a></li>
+                <li><a href="#none">신규매장</a></li>
+                <li><a href="#none">오픈예정매장</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#none">멤버십</a>
+              <ul class="tablet-sub-menu">
+                <li><a href="#none">톨게이트APP</a></li>
+                <li><a href="#none">FAQ</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#none">커뮤니티</a>
+              <ul class="tablet-sub-menu">
+                <li><a href="#none">이벤트</a></li>
+                <li><a href="#none">커반소식</a></li>
+                <li><a href="#none">영상</a></li>
+                <li><a href="#none">SNS</a></li>
+                <li><a href="#none">고객의 소리</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#none">프랜차이즈</a>
+              <ul class="tablet-sub-menu">
+                <li><a href="#none">커피에반하다</a></li>
+                <li><a href="#none">스마트카페</a></li>
+                <li><a href="#none">개설문의</a></li>
+                <li><a href="#none">창업설명회</a></li>
+                <li><a href="#none">FAQ</a></li>
+              </ul>
+            </li>
+          </ul>
         </nav>
       </div>
     </header>
+    <!--pc버전 서브메뉴-->
+    <div class="gnb-pc-sub-menu pc-nav">
+      <div class="wrap">
+        <div class="pc-sub-menu-list">
+          <ul class="pc-sub-menu">
+            <li><a href="#none">브랜드스토리</a></li>
+            <li><a href="#none">커피스토리</a></li>
+            <li><a href="#none">아카데미</a></li>
+            <li><a href="#none">R&D</a></li>
+            <li><a href="#none">연혁</a></li>
+            <li><a href="#none">오시는길</a></li>
+          </ul>
+          <ul class="pc-sub-menu">
+            <li><a href="#none">커피에반하다</a></li>
+            <li><a href="#none">스마트카페</a></li>
+            <li><a href="#none">커피에반하다24</a></li>
+          </ul>
+          <ul class="pc-sub-menu">
+            <li><a href="#none">매장 찾기</a></li>
+            <li><a href="#none">신규매장</a></li>
+            <li><a href="#none">오픈예정매장</a></li>
+          </ul>
+          <ul class="pc-sub-menu">
+            <li><a href="#none">톨게이트APP</a></li>
+            <li><a href="#none">FAQ</a></li>
+          </ul>
+          <ul class="pc-sub-menu">
+            <li><a href="#none">이벤트</a></li>
+            <li><a href="#none">커반소식</a></li>
+            <li><a href="#none">영상</a></li>
+            <li><a href="#none">SNS</a></li>
+            <li><a href="#none">고객의 소리</a></li>
+          </ul>
+          <ul class="pc-sub-menu">
+            <li><a href="#none">커피에반하다</a></li>
+            <li><a href="#none">스마트카페</a></li>
+            <li><a href="#none">개설문의</a></li>
+            <li><a href="#none">창업설명회</a></li>
+            <li><a href="#none">FAQ</a></li>
+          </ul>
+        </div>
+        <!-- <div class="test">
+          <h1>창업문의</h1>
+          <h1>1522-4228</h1>
+        </div>
+      </div> -->
+      </div>
+    </div>
     <!-- main-slide -->
     <section class="main-slide">
       <div class="slide-item">
@@ -104,7 +182,7 @@
           <p>가장 인기있는 메뉴를 즐겨보세요</p>
         </div>
         <div class="best-menu-item-inner">
-          <div class="best-menu-item">
+          <div class="best-menu-item active">
             <img src="/images/best-menu/menu01.png" alt="아이스아메리카노" />
             <p>아이스 아메리카노</p>
           </div>
@@ -153,10 +231,17 @@
     <!-- franchise -->
     <section class="franchise">
       <div class="wrap">
-        <div class="section-title">
+        <div class="section-title section-title-pc">
           <h1>FRANCHISE</h1>
           <p>
             4無정책으로 끝까지 착한 커피에반하다<br />
+            창업문의 1522-4228
+          </p>
+        </div>
+        <div class="section-title section-title-moblie">
+          <h1>FRANCHISE</h1>
+          <p>
+            4無정책으로 끝까지 착한<br />커피에반하다<br />
             창업문의 1522-4228
           </p>
         </div>
@@ -280,14 +365,13 @@
     </section>
     <!-- footer -->
     <footer>
+      <ul class="footer-top">
+        <li><a href="#none">개인정보처리방침</a></li>
+        <li><a href="#none">이용약관</a></li>
+        <li><a href="#none">사이트맵</a></li>
+        <li><a href="#none">오시는길</a></li>
+      </ul>
       <div class="wrap">
-        <ul class="footer-top">
-          <li><a href="#none">개인정보처리방침</a></li>
-          <li><a href="#none">이용약관</a></li>
-          <li><a href="#none">사이트맵</a></li>
-          <li><a href="#none">오시는길</a></li>
-        </ul>
-
         <div class="footer-bottom">
           <img src="/images/footer/logo.png" alt="커피에반하다" />
           <div class="footer-copy-info">
@@ -303,6 +387,29 @@
             </p>
             <p>COPYRIGHTⓒ 커피에반하다 INC. ALL RIGHTS RESERVED</p>
           </div>
+        </div>
+      </div>
+      <div class="footer-float-content">
+        <div class="footer-franchise">
+          <p>창업문의<span>1522-4228</span></p>
+        </div>
+        <div class="sns-icon">
+          <a href="#none"
+            ><img
+              src="/images/footer/sns-instagram.png"
+              alt="인스타그램 바로가기"
+          /></a>
+          <a href="#none"
+            ><img src="/images/footer/sns-facebook.png" alt="페이스북 바로가기"
+          /></a>
+          <a href="#none"
+            ><img src="/images/footer/sns-youtube.png" alt="유튜브 바로가기"
+          /></a>
+          <a href="#none"
+            ><img
+              src="/images/footer/sns-naverBlog.png"
+              alt="네이버블로그 바로가기"
+          /></a>
         </div>
       </div>
     </footer>

@@ -22,7 +22,7 @@ li {
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
 
 /*pc-font-setting*/
-* {
+body {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 18px;
   color: #333;
@@ -48,6 +48,10 @@ h1 {
   flex-flow: column;
 }
 
+.tablet-nav {
+  display: none;
+}
+
 .section-title {
   padding-bottom: 100px;
   text-align: center;
@@ -55,6 +59,10 @@ h1 {
 
 .section-title p {
   padding-top: 10px;
+}
+
+.section-title-moblie {
+  display: none;
 }
 
 .more-btn {
@@ -69,21 +77,6 @@ h1 {
   overflow: hidden;
 }
 
-/* .more-btn:after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  top: 100%;
-  left: 0;
-  background-color: #02235b;
-  position: absolute;
-  transition: 0.3s;
-}
-
-.more-btn:hover:after {
-  top: 0;
-} */
-
 /*header*/
 header {
   height: 100px;
@@ -95,13 +88,26 @@ header .wrap {
   justify-content: space-between;
 }
 
-.gnb-menu li {
+header .wrap > a {
+  display: flex;
+  justify-content: center;
+}
+
+header .wrap > a > img {
+  height: 60px;
+}
+
+.gnb-pc-main-menu {
+  width: 100%;
+}
+
+.gnb-pc-main-menu li {
   float: left;
 }
 
-.gnb-menu li a {
+.gnb-pc-main-menu li a {
   display: block;
-  width: 140px;
+  width: 135px;
   padding: 20px;
   box-sizing: border-box;
   font-weight: 700;
@@ -110,28 +116,57 @@ header .wrap {
   color: #02235b;
 }
 
-.gnb-menu li a:hover {
+.gnb-pc-main-menu li a:hover {
   color: #f7a30a;
 }
 
-.sub-menu-list {
-  z-index: 1;
-  background-color: antiquewhite;
-  position: absolute;
-  top: 100px;
+.gnb-pc-main-menu li a.on {
+  color: #f7a30a;
 }
 
-.sub-menu {
+.gnb-pc-sub-menu {
+  display: none;
+  z-index: 1;
+  width: 100%;
+  position: absolute;
+  border-top: 1px solid #b7b7b7;
+  background-color: #fff;
+}
+
+.gnb-pc-sub-menu.active {
+  display: block;
+}
+
+.gnb-pc-sub-menu .wrap {
+  justify-content: end;
+  padding: 0 100px 50px 100px;
+  position: relative;
+}
+
+.pc-sub-menu {
   float: left;
 }
 
-.sub-menu li a {
+.pc-sub-menu li a {
   display: block;
-  width: 140px;
+  width: 135px;
   padding: 20px;
-  box-sizing: border-box;
+  font-size: 16px;
   text-align: center;
   white-space: pre;
+  box-sizing: border-box;
+}
+
+.pc-sub-menu li a:hover {
+  font-weight: 700;
+  color: #f7a30a;
+}
+
+.test {
+  position: absolute;
+  bottom: 50px;
+  left: 100px;
+  /* translate: 0 -50%; */
 }
 
 /*main-slide*/
@@ -225,6 +260,7 @@ header .wrap {
 
 .brand-item {
   width: 48%;
+  opacity: 0;
 }
 
 .brand-item:last-child {
@@ -295,6 +331,11 @@ header .wrap {
 .franchise-item {
   width: 20%;
   text-align: center;
+  transition: 0.3s;
+}
+
+.franchise-item:hover {
+  translate: 0 -20px;
 }
 
 .franchise-item p {
@@ -317,6 +358,13 @@ header .wrap {
   padding: 40px;
   box-sizing: border-box;
   background-color: #f3f3f3;
+
+  transition: 0.3s;
+}
+
+.notice-item:hover {
+  translate: 0 -20px;
+  box-shadow: 5px 5px 10px #e4e4e4;
 }
 
 .notice-item span {
@@ -332,8 +380,7 @@ header .wrap {
   cursor: pointer;
 }
 
-/*award
-영역 밖으로 빠져나가게 어케하징 ㅠㅠ 알아봐야할듯!*/
+/*award*/
 
 .award {
   height: 70px;
@@ -343,7 +390,7 @@ header .wrap {
 }
 .award-item-inner {
   display: flex;
-  width: 5000px;
+  width: 500%;
   position: absolute;
 }
 
@@ -360,18 +407,26 @@ header .wrap {
 
 /*footer*/
 footer {
+  display: flex;
   height: auto;
+  flex-flow: column;
+  align-items: center;
+  position: relative;
   background-color: #02235b;
+  color: #f3f3f3;
 }
 
 footer .wrap {
-  padding-top: 0;
+  padding: 50px 100px;
   flex-flow: column;
   justify-content: space-between;
 }
 
 .footer-top {
   display: flex;
+  width: 100%;
+  justify-content: center;
+  border-bottom: 1px solid #b7b7b7;
 }
 
 .footer-top li a {
@@ -393,7 +448,6 @@ footer .wrap {
 
 .footer-copy-info p {
   margin-bottom: 10px;
-  color: #fff;
   font-size: 14px;
 }
 
@@ -401,10 +455,112 @@ footer .wrap {
   margin: 0;
 }
 
-/*========== table-version ==========*/
+.footer-float-content {
+  position: absolute;
+  right: 100px;
+  bottom: 50px;
+}
+
+.footer-franchise {
+  margin-bottom: 20px;
+  /* text-align: center; */
+  font-weight: 700;
+}
+
+.footer-franchise p {
+  font-size: 20px;
+  color: #f7a30a;
+}
+
+.footer-franchise span {
+  display: block;
+  font-size: 28px;
+  color: #f3f3f3;
+}
+
+.sns-icon a {
+  margin-right: 10px;
+}
+
+.sns-icon a:last-child {
+  margin-right: 0;
+}
+/* ================================================== */
+/* ================= tablet-version  ================= */
 @media (max-width: 1199px) {
   .wrap {
-    background-color: blue;
+    padding: 50px;
+  }
+
+  .section-title {
+    padding-bottom: 50px;
+  }
+
+  .pc-nav {
+    display: none;
+  }
+
+  .tablet-nav {
+    display: block;
+  }
+  /*header*/
+  header .wrap {
+    padding: 0 50px;
+    justify-content: space-between;
+  }
+
+  .tablet-drawer-menu {
+    padding: 10px;
+  }
+
+  .tablet-drawer-menu span {
+    display: block;
+    width: 30px;
+    height: 2px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: #02235b;
+  }
+
+  .tablet-drawer-menu span:last-child {
+    margin-bottom: 0;
+  }
+
+  .tablet-gnb-menu-list {
+    display: none;
+    width: 60vh;
+    height: 100vh;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    background-color: #fff;
+    z-index: 1;
+  }
+
+  .tablet-gnb-menu-list.active {
+    display: block;
+  }
+
+  .tablet-gnb-menu > li > a {
+    font-weight: 700;
+    color: #02235b;
+  }
+
+  .tablet-gnb-menu a {
+    display: block;
+    padding: 20px;
+  }
+
+  .tablet-sub-menu {
+    display: none;
+  }
+
+  .tablet-sub-menu.active {
+    display: block;
+  }
+
+  .tablet-sub-menu a {
+    font-size: 16px;
   }
 
   /*best-menu*/
@@ -413,22 +569,21 @@ footer .wrap {
   }
 
   .best-menu-item {
-    width: 50%;
+    width: 48%;
+    margin-bottom: 30px;
     padding: 10px;
     box-sizing: border-box;
   }
+
+  .best-menu-item:nth-child(3),
+  .best-menu-item:nth-child(4) {
+    margin-bottom: 0;
+  }
+
   /*brand-info*/
-  .brand-info .wrap {
-    flex-flow: column;
-    /* justify-content: space-between; */
-  }
 
-  .brand-item {
-    width: 100%;
-  }
-
-  .brand-item:last-child {
-    flex-flow: column;
+  .brand-item > img {
+    height: 300px;
   }
 
   /*franchise*/
@@ -440,9 +595,9 @@ footer .wrap {
 
   .notice-item {
     width: 48%;
+    margin-bottom: 30px;
   }
-  /*award
-영역 밖으로 빠져나가게 어케하징 ㅠㅠ 알아봐야할듯!*/
+  /*award*/
 
   .award-item-inner {
     display: flex;
@@ -457,15 +612,23 @@ footer .wrap {
     margin: 0 25px;
     flex-flow: row;
   }
-}
 
-/* moblie-version */
+  /*footer*/
+  .footer-float-content {
+    display: none;
+  }
+}
+/* ================================================== */
+/* ================= moblie-version ================= */
 @media (max-width: 767px) {
   /*moblie-font-setting*/
   * {
-    font-family: "Noto Sans KR", sans-serif;
     font-size: 16px;
-    color: #333;
+  }
+
+  .section-title {
+    padding: 0;
+    padding-bottom: 50px;
   }
 
   h1 {
@@ -475,10 +638,70 @@ footer .wrap {
 
   .wrap {
     padding: 50px 20px;
-    background-color: red;
+  }
+
+  .more-btn {
+    margin-top: 50px;
+    font-size: 14px;
+  }
+
+  .section-title-pc {
+    display: none;
+  }
+
+  .section-title-moblie {
+    display: block;
+  }
+
+  /*header*/
+  header {
+    height: 50px;
+  }
+
+  header .wrap {
+    padding: 0 20px;
+  }
+
+  header .wrap > a {
+    display: flex;
+    justify-content: center;
+  }
+
+  header .wrap > a > img {
+    height: 40px;
+  }
+
+  .tablet-drawer-menu {
+    padding: 0px;
+  }
+
+  .tablet-drawer-menu span {
+    width: 20px;
+    height: 2px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+  }
+
+  /*main-slide*/
+  .main-slide {
+    height: 500px;
+  }
+
+  .slide-btn {
+    margin-bottom: 10px;
+    bottom: 10px;
+  }
+
+  .slide-btn li {
+    width: 10px;
+    height: 10px;
+    margin-left: 15px;
   }
 
   /*best-menu*/
+  .best-menu .wrap {
+    display: flex;
+  }
   .best-menu-item-inner {
     display: block;
     height: 320px;
@@ -486,18 +709,90 @@ footer .wrap {
   }
 
   .best-menu-item {
+    display: none;
+    flex-flow: column;
     width: 100%;
     height: 100%;
+    margin: 0;
+    padding: 0;
     position: absolute;
   }
+
+  .best-menu-item.active {
+    display: flex;
+  }
+
+  .best-menu-item img {
+    height: 90%;
+  }
+
+  .best-menu-item p {
+    height: 10%;
+  }
+
   /*brand-info*/
+
+  .brand-info .wrap {
+    flex-flow: column wrap;
+  }
+
+  .brand-item {
+    width: 100%;
+  }
+
+  .brand-item:last-child {
+    flex-flow: column;
+    margin-top: 50px;
+  }
+
+  .brand-item > img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+  }
+
+  .brand-title h1 {
+    font-size: 36px;
+  }
+
+  .store-search-btn {
+    margin: 0px;
+  }
+
+  .store-search-btn input {
+    height: 40px;
+    padding: 15px 5px;
+  }
+
+  .store-search-btn input::placeholder {
+    font-size: 14px;
+  }
+
+  .store-search-btn button {
+    width: 60px;
+    height: 40px;
+    transform: translate(-10px, 5px);
+  }
+
+  .store-search-btn button img {
+    margin-right: 5px;
+  }
+
   /*franchise*/
   .franchise-item-inner {
     flex-flow: row wrap;
+    justify-content: space-between;
+    height: auto;
   }
 
   .franchise-item {
-    width: 50%;
+    width: 48%;
+    margin-bottom: 30px;
+  }
+
+  .franchise-item:nth-child(3),
+  .franchise-item:nth-child(4) {
+    margin-bottom: 0;
   }
 
   .franchise-item:last-child {
@@ -516,8 +811,49 @@ footer .wrap {
     position: absolute;
   }
 
+  .notice > .wrap > p {
+    padding: 0;
+    padding-top: 50px;
+  }
   /*award*/
   .award {
     display: none;
   }
+
+  /*footer*/
+  footer {
+    font-size: 14px;
+  }
+
+  footer .wrap {
+    padding: 0 20px;
+  }
+
+  .footer-top {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #b7b7b7;
+  }
+
+  .footer-top li {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 50%;
+  }
+
+  .footer-top li a {
+    display: inline-block;
+    padding: 20px;
+    box-sizing: border-box;
+    white-space: pre;
+  }
+
+  .footer-bottom {
+    margin-bottom: 20px;
+    text-align: center;
+  }
 }
+/* ================================================== */
