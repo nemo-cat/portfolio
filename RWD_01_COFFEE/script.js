@@ -1,4 +1,34 @@
 $(document).ready(function () {
+  $(window)
+    .resize(function () {
+      if (window.innerWidth >= 1199) {
+        $(".tablet-gnb-menu-list").slideUp(10);
+      } else if (window.innerWidth >= 768) {
+        $(".gnb-pc-sub-menu").slideUp(10);
+        $(".gnb-pc-main-menu li a").removeClass("on");
+      } else {
+        $(".tablet-gnb-menu-list").slideUp(10);
+
+        /*  베스트메뉴
+        $(".best-menu-item-inner div").eq(0).siblings().hide(); //0번째 슬라이드 외의 슬라이드 숨김
+        let nowIdx = 0; //현재 슬라이드의 인덱스 번호
+        let imgCount = $(".best-menu-item-inner div").length - 1; //전체 슬라이드 갯수
+
+        function fadeBestItem() {
+  
+          $(".best-menu-item-inner div").eq(nowIdx).fadeIn();
+          $(".best-menu-item-inner div").eq(nowIdx).siblings().fadeOut();
+          nowIdx++; //슬라이드 인덱스+1
+          if (nowIdx > imgCount) {
+            nowIdx = 0; //전체 슬라이드 갯수를 초과하면 인덱스 0으로 초기화
+          }
+        }
+        setInterval(fadeBestItem, 3000);
+        */
+      }
+    })
+    .resize();
+
   /*pc 네비게이션*/
   $(".gnb-pc-main-menu li a").mouseover(function () {
     $(".gnb-pc-sub-menu").slideDown();
@@ -18,6 +48,34 @@ $(document).ready(function () {
       .siblings()
       .children("a")
       .removeClass("on");
+  });
+
+  /* 태블릿, 모바일 네비게이션 */
+  $(".tablet-drawer-menu").click(function () {
+    $(".tablet-gnb-menu-list").toggleClass("active");
+    let checkClass = $(".tablet-gnb-menu-list").hasClass("active"); // 클래스를 가지는지 확인
+    if (checkClass == true) {
+      $(".tablet-gnb-menu-list").slideDown();
+    } else {
+      $(".tablet-gnb-menu-list").slideUp();
+      $(".tablet-gnb-menu li a")
+        .parent()
+        .siblings("li")
+        .children(".tablet-sub-menu")
+        .slideUp();
+      $(".tablet-gnb-menu li a")
+        .parent()
+        .siblings("li")
+        .children("a")
+        .removeClass("active");
+    }
+  });
+
+  $(".tablet-gnb-menu li a").click(function () {
+    $(this).toggleClass("active");
+    $(this).siblings("ul").slideToggle();
+    $(this).parent().siblings("li").children(".tablet-sub-menu").slideUp();
+    $(this).parent().siblings("li").children("a").removeClass("active");
   });
 
   /* ==================== 메인 슬라이드 ==================== */
@@ -66,4 +124,25 @@ $(document).ready(function () {
   /* ================================================= */
 
   /* 어워드 롤링 */
+  let awardWidth = $(".award-item").length;
+  let itemWidth = $(".award-item").width;
+  let totalWidth = awardWidth * itemWidth;
+
+  $(".award-item-inner").css("width", totalWidth);
 });
+
+//롤링베너 만들기
+let roller = document.querySelector(".award-item-inner");
+roller.id = "roller1"; // 아이디 부여
+
+let clone = roller.cloneNode(true); // cloneNode(true) 사용하여 자식까지 복제/ 기본값 false
+clone.id = "roller2";
+document.querySelector(".award").appendChild(clone); // award의 하위 자식으로 부착
+
+document.querySelector("#roller1").style.left = "0px";
+document.querySelector("#roller2").style.left =
+  document.querySelector(".award-item-inner div").offsetWidth + "px";
+// offsetWidth : 요소의 크기 확인(margin을 제외한 padding값, border값까지 계산한 값)
+
+roller.classList.add("original");
+clone.classList.add("clone");
