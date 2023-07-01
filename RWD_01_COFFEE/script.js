@@ -1,33 +1,33 @@
 $(document).ready(function () {
-  $(window)
-    .resize(function () {
-      if (window.innerWidth >= 1199) {
-        $(".tablet-gnb-menu-list").slideUp(10);
-      } else if (window.innerWidth >= 768) {
-        $(".gnb-pc-sub-menu").slideUp(10);
-        $(".gnb-pc-main-menu li a").removeClass("on");
-      } else {
-        $(".tablet-gnb-menu-list").slideUp(10);
+  /* ======================================= */
+  $(window).resize(function () {
+    var subWidthSizing = $(window).width();
+    if (subWidthSizing >= 1199) {
+      $(".tablet-gnb-menu-list").slideUp(10);
+    } else if (subWidthSizing >= 768) {
+      $(".gnb-pc-sub-menu").slideUp(10);
+      $(".gnb-pc-main-menu li a").removeClass("on");
+      $(".best-menu-item").show();
+    } else if (subWidthSizing < 768) {
+      $(".tablet-gnb-menu-list").slideUp(10);
 
-        /*  베스트메뉴
-        $(".best-menu-item-inner div").eq(0).siblings().hide(); //0번째 슬라이드 외의 슬라이드 숨김
-        let nowIdx = 0; //현재 슬라이드의 인덱스 번호
-        let imgCount = $(".best-menu-item-inner div").length - 1; //전체 슬라이드 갯수
+      /* 베스트메뉴 슬라이드-모바일버전 */
+      $(".best-menu-item").eq(0).siblings().hide(); //0번째 슬라이드 외의 슬라이드 숨김
+      let bestMenuIdx = 0; //현재 슬라이드의 인덱스 번호
+      let bestMenuCount = $(".best-menu-item").length;
 
-        function fadeBestItem() {
-  
-          $(".best-menu-item-inner div").eq(nowIdx).fadeIn();
-          $(".best-menu-item-inner div").eq(nowIdx).siblings().fadeOut();
-          nowIdx++; //슬라이드 인덱스+1
-          if (nowIdx > imgCount) {
-            nowIdx = 0; //전체 슬라이드 갯수를 초과하면 인덱스 0으로 초기화
-          }
+      function fadeBestMenu() {
+        /* 슬라이드 페이드인-페이드아웃 */
+        $(".best-menu-item").eq(bestMenuIdx).fadeIn();
+        $(".best-menu-item").eq(bestMenuIdx).siblings().fadeOut();
+        bestMenuIdx++; //슬라이드 인덱스+1
+        if (bestMenuIdx > bestMenuCount) {
+          bestMenuIdx = 0; //전체 슬라이드 갯수를 초과하면 인덱스 0으로 초기화
         }
-        setInterval(fadeBestItem, 3000);
-        */
       }
-    })
-    .resize();
+      let bestInterval = setInterval(fadeBestMenu, 3000);
+    }
+  });
 
   /*pc 네비게이션*/
   $(".gnb-pc-main-menu li a").mouseover(function () {

@@ -293,6 +293,7 @@ header .wrap > a > img {
   height: 50px;
   margin: 0;
   padding: 17px 10px;
+  padding-left: 20px;
   box-sizing: border-box;
   border: none;
   border-radius: 50px 0 0 50px;
@@ -663,6 +664,10 @@ footer .wrap {
     font-size: 16px;
   }
 
+  body {
+    min-width: 320px;
+  }
+
   .section-title {
     padding: 0;
     padding-bottom: 50px;
@@ -832,6 +837,7 @@ footer .wrap {
   .store-search-btn input {
     height: 40px;
     padding: 15px 5px;
+    padding-left: 10px;
   }
 
   .store-search-btn input::placeholder {
