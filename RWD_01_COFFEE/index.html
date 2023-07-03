@@ -10,6 +10,55 @@
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
   </head>
   <body>
+    <!--창업상담-->
+    <aside>
+      <div class="consulting-wrap">
+        <div class="consulting-title">
+          <b>창업상담</b>
+          <h3>1522-4228</h3>
+        </div>
+        <div class="consulting-contents">
+          <select name="consulting-type">
+            <option value="브랜드">브랜드</option>
+            <option value="커피에반하다(유인)">커피에반하다(유인)</option>
+            <option value="스마트카페">스마트카페</option>
+          </select>
+          <input type="text" placeholder="성함" />
+          <input type="text" placeholder="연락처" />
+          <input type="text" placeholder="이메일" />
+          <select name="sido" id="sido">
+            <option value="시/도 선택">시/도 선택</option>
+            <option value="1">서울특별시</option>
+            <option value="2">인천광역시</option>
+            <option value="3">대전광역시</option>
+            <option value="4">광주광역시</option>
+            <option value="5">대구광역시</option>
+            <option value="6">울산광역시</option>
+            <option value="7">부산광역시</option>
+            <option value="8">경기도</option>
+            <option value="9">강원도</option>
+            <option value="10">충청북도</option>
+            <option value="11">충청남도</option>
+            <option value="12">전라북도</option>
+            <option value="13">전라남도</option>
+            <option value="14">경상북도</option>
+            <option value="15">경상남도</option>
+            <option value="16">제주도</option>
+          </select>
+          <select name="gugun" id="gugun">
+            <option value="구/군 선택">구/군 선택</option>
+          </select>
+          <div class="check-box">
+            <input type="checkbox" /><span>개인정보수집이용동의</span>
+          </div>
+        </div>
+        <div class="consulting-btn">
+          <button>상담신청</button>
+          <button>창업설명회 신청</button>
+        </div>
+      </div>
+    </aside>
+
     <!-- header -->
     <header>
       <div class="wrap">
@@ -134,11 +183,6 @@
             <li><a href="#none">FAQ</a></li>
           </ul>
         </div>
-        <!-- <div class="test">
-          <h1>창업문의</h1>
-          <h1>1522-4228</h1>
-        </div>
-      </div> -->
       </div>
     </div>
     <!-- main-slide -->
@@ -180,22 +224,24 @@
           <h1>BEST MENU</h1>
           <p>가장 인기있는 메뉴를 즐겨보세요</p>
         </div>
-        <div class="best-menu-item-inner">
-          <div class="best-menu-item active">
-            <img src="/images/best-menu/menu01.png" alt="아이스아메리카노" />
-            <p>아이스 아메리카노</p>
-          </div>
-          <div class="best-menu-item">
-            <img src="/images/best-menu/menu02.png" alt="아이스아메리카노" />
-            <p>아이스 카페라테</p>
-          </div>
-          <div class="best-menu-item">
-            <img src="/images/best-menu/menu03.png" alt="아이스아메리카노" />
-            <p>살구자두 히비스 에이드</p>
-          </div>
-          <div class="best-menu-item">
-            <img src="/images/best-menu/menu04.png" alt="아이스아메리카노" />
-            <p>라이트 초코 쉐이크</p>
+        <div class="best-menu-items">
+          <div class="best-menu-item-inner">
+            <div class="best-menu-item active">
+              <img src="/images/best-menu/menu01.png" alt="아이스아메리카노" />
+              <p>아이스 아메리카노</p>
+            </div>
+            <div class="best-menu-item">
+              <img src="/images/best-menu/menu02.png" alt="아이스아메리카노" />
+              <p>아이스 카페라테</p>
+            </div>
+            <div class="best-menu-item">
+              <img src="/images/best-menu/menu03.png" alt="아이스아메리카노" />
+              <p>살구자두 히비스 에이드</p>
+            </div>
+            <div class="best-menu-item">
+              <img src="/images/best-menu/menu04.png" alt="아이스아메리카노" />
+              <p>라이트 초코 쉐이크</p>
+            </div>
           </div>
         </div>
         <a href="#none" class="more-btn">MORE</a>
