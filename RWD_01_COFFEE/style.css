@@ -4,10 +4,12 @@ body {
   margin: 0;
   padding: 0;
 }
+
 h1,
 p {
   margin: 0;
 }
+
 a {
   text-decoration: none;
   color: inherit;
@@ -19,6 +21,7 @@ li {
   padding: 0;
   list-style: none;
 }
+
 /*import-font*/
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
 
@@ -33,6 +36,7 @@ h1 {
   font-size: 44px;
   color: #02235b;
 }
+
 /*전체 셋팅*/
 .wrap {
   display: flex;
@@ -80,6 +84,7 @@ h1 {
 .more-btn:hover {
   background-color: #02235b;
 }
+
 /*aside*/
 aside {
   display: block;
@@ -169,12 +174,12 @@ header .wrap {
   justify-content: space-between;
 }
 
-header .wrap > a {
+header .wrap>a {
   display: flex;
   justify-content: center;
 }
 
-header .wrap > a > img {
+header .wrap>a>img {
   height: 60px;
 }
 
@@ -297,11 +302,28 @@ header .wrap > a > img {
   background-color: #f7a30a;
 }
 
+.back-bg {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.back-bg.active {
+  display: block;
+}
+
 /*best-menu*/
 .best-menu-items {
   display: flex;
   width: 100%;
   justify-content: space-between;
+}
+
+.best-menu-mobile {
+  display: none;
 }
 
 .best-menu-item-inner {
@@ -332,6 +354,7 @@ header .wrap > a > img {
   line-height: 50px;
   text-align: center;
 }
+
 /*brand-info*/
 .brand-info {
   background-color: #f3f3f3;
@@ -355,7 +378,7 @@ header .wrap > a > img {
   flex-flow: column-reverse;
 }
 
-.brand-item > img {
+.brand-item>img {
   width: 100%;
   height: 400px;
   object-fit: cover;
@@ -432,6 +455,10 @@ header .wrap > a > img {
 
 /*notice*/
 
+.notice-moblie {
+  display: none;
+}
+
 .notice-item-inner {
   display: flex;
   justify-content: space-between;
@@ -482,6 +509,7 @@ header .wrap > a > img {
   position: relative;
   overflow: hidden;
 }
+
 .award-item-inner {
   display: flex;
   width: 400%;
@@ -502,6 +530,7 @@ header .wrap > a > img {
 .award-item-inner.original {
   animation: rollingleft1 40s linear infinite;
 }
+
 .award-item-inner.clone {
   animation: rollingleft2 40s linear infinite;
 }
@@ -510,12 +539,15 @@ header .wrap > a > img {
   0% {
     transform: translateX(0);
   }
+
   50% {
     transform: translateX(-100%);
   }
+
   50.01% {
     transform: translateX(100%);
   }
+
   100% {
     transform: translateX(0);
   }
@@ -525,6 +557,7 @@ header .wrap > a > img {
   0% {
     transition: translateX(0);
   }
+
   100% {
     transform: translateX(-200%);
   }
@@ -610,6 +643,7 @@ footer .wrap {
 .sns-icon a:last-child {
   margin-right: 0;
 }
+
 /* ================================================== */
 /* ================= tablet-version  ================= */
 @media (max-width: 1199px) {
@@ -632,7 +666,12 @@ footer .wrap {
   aside {
     display: none;
   }
+
   /*header*/
+  header {
+    height: 70px;
+  }
+
   header .wrap {
     padding: 0 50px;
     justify-content: space-between;
@@ -657,16 +696,16 @@ footer .wrap {
 
   .tablet-gnb-menu-list {
     display: none;
-    width: 60vh;
+    width: 60%;
     height: 100vh;
     position: absolute;
-    top: 100px;
+    top: 70px;
     right: 0;
     background-color: #fff;
     z-index: 2;
   }
 
-  .tablet-gnb-menu > li > a {
+  .tablet-gnb-menu>li>a {
     font-weight: 700;
     color: #02235b;
   }
@@ -676,7 +715,7 @@ footer .wrap {
     padding: 20px;
   }
 
-  .tablet-gnb-menu > li > a.active {
+  .tablet-gnb-menu>li>a.active {
     color: #f7a30a;
   }
 
@@ -700,6 +739,10 @@ footer .wrap {
     box-sizing: border-box;
   }
 
+  .best-menu-mobile {
+    display: none;
+  }
+
   .best-menu-item:nth-child(3),
   .best-menu-item:nth-child(4) {
     margin-bottom: 0;
@@ -707,13 +750,17 @@ footer .wrap {
 
   /*brand-info*/
 
-  .brand-item > img {
+  .brand-item>img {
     height: 300px;
   }
 
   /*franchise*/
 
   /*notice*/
+  .notice-moblie {
+    display: none;
+  }
+
   .notice-item-inner {
     flex-flow: row wrap;
   }
@@ -723,30 +770,16 @@ footer .wrap {
     margin-bottom: 30px;
   }
 
-  /*award*/
-
-  .award-item-inner {
-    display: flex;
-    padding: 50px 0;
-    flex-flow: row;
-  }
-
-  .award-item {
-    display: flex;
-    width: 200px;
-    height: 70px;
-    margin: 0 25px;
-    flex-flow: row;
-  }
-
   /*footer*/
   .footer-float-content {
     display: none;
   }
 }
+
 /* ================================================== */
 /* ================= moblie-version ================= */
 @media (max-width: 767px) {
+
   /*moblie-font-setting*/
   * {
     font-size: 16px;
@@ -796,12 +829,12 @@ footer .wrap {
     padding: 0 20px;
   }
 
-  header .wrap > a {
+  header .wrap>a {
     display: flex;
     justify-content: center;
   }
 
-  header .wrap > a > img {
+  header .wrap>a>img {
     height: 40px;
   }
 
@@ -821,7 +854,7 @@ footer .wrap {
     top: 50px;
   }
 
-  .tablet-gnb-menu > li > a {
+  .tablet-gnb-menu>li>a {
     font-weight: 700;
     color: #02235b;
   }
@@ -863,19 +896,21 @@ footer .wrap {
     width: 100%;
     overflow: hidden;
   }
+
   .best-menu .wrap {
     display: flex;
     justify-content: flex-start;
   }
-  /*  .best-menu-item-inner {
-    display: block;
-    height: 320px;
-   position: relative;
-  } */
 
   .best-menu-items {
+    display: none;
     position: relative;
     height: 420px;
+  }
+
+  .best-menu-mobile {
+    display: flex;
+    position: relative;
   }
 
   .best-menu-item-inner {
@@ -923,7 +958,7 @@ footer .wrap {
     margin-top: 50px;
   }
 
-  .brand-item > img {
+  .brand-item>img {
     width: 100%;
     height: 280px;
     object-fit: cover;
@@ -984,11 +1019,16 @@ footer .wrap {
   .franchise-item:last-child {
     display: none;
   }
+
   /*notice*/
   .notice-item-inner {
-    display: block;
+    display: none;
     height: 210px;
     position: relative;
+  }
+
+  .notice-moblie {
+    display: block;
   }
 
   .notice-item {
@@ -997,10 +1037,11 @@ footer .wrap {
     position: absolute;
   }
 
-  .notice > .wrap > p {
+  .notice>.wrap>p {
     padding: 0;
     padding-top: 50px;
   }
+
   /*award*/
   .award {
     display: none;
@@ -1042,4 +1083,5 @@ footer .wrap {
     text-align: center;
   }
 }
+
 /* ================================================== */

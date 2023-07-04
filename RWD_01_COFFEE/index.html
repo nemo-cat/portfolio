@@ -1,463 +1,474 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>커피에반하다</title>
-    <!-- link css -->
-    <link rel="stylesheet" href="/style.css" />
-    <!-- jQuery CDN -->
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-  </head>
-  <body>
-    <!--창업상담-->
-    <aside>
-      <div class="consulting-wrap">
-        <div class="consulting-title">
-          <b>창업상담</b>
-          <h3>1522-4228</h3>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>커피에반하다</title>
+  <!-- link css -->
+  <link rel="stylesheet" href="/style.css" />
+  <!-- jQuery CDN -->
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<body>
+  <!--창업상담-->
+  <aside>
+    <div class="consulting-wrap">
+      <div class="consulting-title">
+        <b>창업상담</b>
+        <h3>1522-4228</h3>
+      </div>
+      <div class="consulting-contents">
+        <select name="consulting-type">
+          <option value="브랜드">브랜드</option>
+          <option value="커피에반하다(유인)">커피에반하다(유인)</option>
+          <option value="스마트카페">스마트카페</option>
+        </select>
+        <input id="name" type="text" placeholder="성함" />
+        <input id="phone" type="text" placeholder="연락처" />
+        <input id="e-mail" type="text" placeholder="이메일" />
+        <select name="sido" id="sido">
+          <option value="시/도 선택">시/도 선택</option>
+          <option value="1">서울특별시</option>
+          <option value="2">인천광역시</option>
+          <option value="3">대전광역시</option>
+          <option value="4">광주광역시</option>
+          <option value="5">대구광역시</option>
+          <option value="6">울산광역시</option>
+          <option value="7">부산광역시</option>
+          <option value="8">경기도</option>
+          <option value="9">강원도</option>
+          <option value="10">충청북도</option>
+          <option value="11">충청남도</option>
+          <option value="12">전라북도</option>
+          <option value="13">전라남도</option>
+          <option value="14">경상북도</option>
+          <option value="15">경상남도</option>
+          <option value="16">제주도</option>
+        </select>
+        <select name="gugun" id="gugun">
+          <option value="구/군 선택">구/군 선택</option>
+        </select>
+        <div class="check-box">
+          <input type="checkbox" id="agreeCheck" /><span>개인정보수집이용동의</span>
         </div>
-        <div class="consulting-contents">
-          <select name="consulting-type">
-            <option value="브랜드">브랜드</option>
-            <option value="커피에반하다(유인)">커피에반하다(유인)</option>
-            <option value="스마트카페">스마트카페</option>
-          </select>
-          <input type="text" placeholder="성함" />
-          <input type="text" placeholder="연락처" />
-          <input type="text" placeholder="이메일" />
-          <select name="sido" id="sido">
-            <option value="시/도 선택">시/도 선택</option>
-            <option value="1">서울특별시</option>
-            <option value="2">인천광역시</option>
-            <option value="3">대전광역시</option>
-            <option value="4">광주광역시</option>
-            <option value="5">대구광역시</option>
-            <option value="6">울산광역시</option>
-            <option value="7">부산광역시</option>
-            <option value="8">경기도</option>
-            <option value="9">강원도</option>
-            <option value="10">충청북도</option>
-            <option value="11">충청남도</option>
-            <option value="12">전라북도</option>
-            <option value="13">전라남도</option>
-            <option value="14">경상북도</option>
-            <option value="15">경상남도</option>
-            <option value="16">제주도</option>
-          </select>
-          <select name="gugun" id="gugun">
-            <option value="구/군 선택">구/군 선택</option>
-          </select>
-          <div class="check-box">
-            <input type="checkbox" /><span>개인정보수집이용동의</span>
+      </div>
+      <div class="consulting-btn">
+        <button id="applyConsulting">상담신청</button>
+        <button id="presentation">창업설명회 신청</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- header -->
+  <header>
+    <div class="wrap">
+      <a href="#none"><img src="/images/header-logo.png" alt="커피에반하다" /></a>
+      <!--pc버전 네비게이션-->
+      <nav class="pc-nav">
+        <ul class="gnb-pc-main-menu">
+          <li><a href="#none">커피에반하다</a></li>
+          <li><a href="#none">메뉴</a></li>
+          <li><a href="#none"> 매장안내 </a></li>
+          <li><a href="#none">멤버십</a></li>
+          <li><a href="#none">커뮤니티</a></li>
+          <li><a href="#none">프랜차이즈</a></li>
+        </ul>
+      </nav>
+      <!--태블릿, 모바일 버전 네비게이션-->
+      <div class="tablet-nav tablet-drawer-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="tablet-nav tablet-gnb-menu-list">
+        <ul class="tablet-gnb-menu">
+          <li>
+            <a href="#none">커피에반하다</a>
+            <ul class="tablet-sub-menu">
+              <li><a href="#none">브랜드스토리</a></li>
+              <li><a href="#none">커피스토리</a></li>
+              <li><a href="#none">아카데미</a></li>
+              <li><a href="#none">R&D</a></li>
+              <li><a href="#none">연혁</a></li>
+              <li><a href="#none">오시는길</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#none">메뉴</a>
+            <ul class="tablet-sub-menu">
+              <li><a href="#none">커피에반하다</a></li>
+              <li><a href="#none">스마트카페</a></li>
+              <li><a href="#none">커피에반하다24</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#none">매장안내</a>
+            <ul class="tablet-sub-menu">
+              <li><a href="#none">매장 찾기</a></li>
+              <li><a href="#none">신규매장</a></li>
+              <li><a href="#none">오픈예정매장</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#none">멤버십</a>
+            <ul class="tablet-sub-menu">
+              <li><a href="#none">톨게이트APP</a></li>
+              <li><a href="#none">FAQ</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#none">커뮤니티</a>
+            <ul class="tablet-sub-menu">
+              <li><a href="#none">이벤트</a></li>
+              <li><a href="#none">커반소식</a></li>
+              <li><a href="#none">영상</a></li>
+              <li><a href="#none">SNS</a></li>
+              <li><a href="#none">고객의 소리</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#none">프랜차이즈</a>
+            <ul class="tablet-sub-menu">
+              <li><a href="#none">커피에반하다</a></li>
+              <li><a href="#none">스마트카페</a></li>
+              <li><a href="#none">개설문의</a></li>
+              <li><a href="#none">창업설명회</a></li>
+              <li><a href="#none">FAQ</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="back-bg"></div>
+  <!--pc버전 서브메뉴-->
+  <div class="gnb-pc-sub-menu pc-nav">
+    <div class="wrap">
+      <div class="pc-sub-menu-list">
+        <ul class="pc-sub-menu">
+          <li><a href="#none">브랜드스토리</a></li>
+          <li><a href="#none">커피스토리</a></li>
+          <li><a href="#none">아카데미</a></li>
+          <li><a href="#none">R&D</a></li>
+          <li><a href="#none">연혁</a></li>
+          <li><a href="#none">오시는길</a></li>
+        </ul>
+        <ul class="pc-sub-menu">
+          <li><a href="#none">커피에반하다</a></li>
+          <li><a href="#none">스마트카페</a></li>
+          <li><a href="#none">커피에반하다24</a></li>
+        </ul>
+        <ul class="pc-sub-menu">
+          <li><a href="#none">매장 찾기</a></li>
+          <li><a href="#none">신규매장</a></li>
+          <li><a href="#none">오픈예정매장</a></li>
+        </ul>
+        <ul class="pc-sub-menu">
+          <li><a href="#none">톨게이트APP</a></li>
+          <li><a href="#none">FAQ</a></li>
+        </ul>
+        <ul class="pc-sub-menu">
+          <li><a href="#none">이벤트</a></li>
+          <li><a href="#none">커반소식</a></li>
+          <li><a href="#none">영상</a></li>
+          <li><a href="#none">SNS</a></li>
+          <li><a href="#none">고객의 소리</a></li>
+        </ul>
+        <ul class="pc-sub-menu">
+          <li><a href="#none">커피에반하다</a></li>
+          <li><a href="#none">스마트카페</a></li>
+          <li><a href="#none">개설문의</a></li>
+          <li><a href="#none">창업설명회</a></li>
+          <li><a href="#none">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- main-slide -->
+  <section class="main-slide">
+    <div class="slide-item">
+      <a href="#none" class="item"><img src="/images/main-slide/pc-slide_01.jpg" alt="빛이나는 SOLO 빙수" />
+      </a>
+      <a href="#none" class="item">
+        <img src="/images/main-slide/pc-slide_02.jpg" alt="여름한정메뉴" />
+      </a>
+      <a href="#none" class="item">
+        <img src="/images/main-slide/pc-slide_03.jpg" alt="스마트카페 전용 티타임" />
+      </a>
+      <a href="#none" class="item">
+        <img src="/images/main-slide/pc-slide_04.jpg" alt="Light and Delight" />
+      </a>
+    </div>
+    <ul class="slide-btn">
+      <li class="on"></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </section>
+  <!-- best-menu -->
+  <section class="best-menu">
+    <div class="wrap">
+      <div class="section-title">
+        <h1>BEST MENU</h1>
+        <p>가장 인기있는 메뉴를 즐겨보세요</p>
+      </div>
+      <div class="best-menu-items best-menu-mobile">
+        <div class="best-menu-item-inner">
+          <div class="best-menu-item active best-menu-mobile-item">
+            <img src="/images/best-menu/menu01.png" alt="아이스아메리카노" />
+            <p>아이스 아메리카노</p>
+          </div>
+          <div class="best-menu-item best-menu-mobile-item">
+            <img src="/images/best-menu/menu02.png" alt="아이스아메리카노" />
+            <p>아이스 카페라테</p>
+          </div>
+          <div class="best-menu-item best-menu-mobile-item">
+            <img src="/images/best-menu/menu03.png" alt="아이스아메리카노" />
+            <p>살구자두 히비스 에이드</p>
+          </div>
+          <div class="best-menu-item best-menu-mobile-item">
+            <img src="/images/best-menu/menu04.png" alt="아이스아메리카노" />
+            <p>라이트 초코 쉐이크</p>
           </div>
         </div>
-        <div class="consulting-btn">
-          <button>상담신청</button>
-          <button>창업설명회 신청</button>
+      </div>
+      <div class="best-menu-items">
+        <div class="best-menu-item-inner">
+          <div class="best-menu-item active">
+            <img src="/images/best-menu/menu01.png" alt="아이스아메리카노" />
+            <p>아이스 아메리카노</p>
+          </div>
+          <div class="best-menu-item">
+            <img src="/images/best-menu/menu02.png" alt="아이스아메리카노" />
+            <p>아이스 카페라테</p>
+          </div>
+          <div class="best-menu-item">
+            <img src="/images/best-menu/menu03.png" alt="아이스아메리카노" />
+            <p>살구자두 히비스 에이드</p>
+          </div>
+          <div class="best-menu-item">
+            <img src="/images/best-menu/menu04.png" alt="아이스아메리카노" />
+            <p>라이트 초코 쉐이크</p>
+          </div>
         </div>
       </div>
-    </aside>
-
-    <!-- header -->
-    <header>
-      <div class="wrap">
-        <a href="#none"
-          ><img src="/images/header-logo.png" alt="커피에반하다"
-        /></a>
-        <!--pc버전 네비게이션-->
-        <nav class="pc-nav">
-          <ul class="gnb-pc-main-menu">
-            <li><a href="#none">커피에반하다</a></li>
-            <li><a href="#none">메뉴</a></li>
-            <li><a href="#none"> 매장안내 </a></li>
-            <li><a href="#none">멤버십</a></li>
-            <li><a href="#none">커뮤니티</a></li>
-            <li><a href="#none">프랜차이즈</a></li>
-          </ul>
-        </nav>
-        <!--태블릿, 모바일 버전 네비게이션-->
-        <div class="tablet-nav tablet-drawer-menu">
-          <span></span>
-          <span></span>
-          <span></span>
+      <a href="#none" class="more-btn">MORE</a>
+    </div>
+  </section>
+  <!-- brand-info -->
+  <section class="brand-info">
+    <div class="wrap">
+      <div class="brand-item">
+        <img src="/images/brand-info/best-info-item01.png" alt="커피의비밀" />
+        <div class="brand-title">
+          <h1>CURBAN ROASTING</h1>
+          <p>맛있는 커피에반하다 커피의 비밀</p>
+          <a href="#none" class="more-btn">MORE</a>
         </div>
-        <nav class="tablet-nav tablet-gnb-menu-list">
-          <ul class="tablet-gnb-menu">
-            <li>
-              <a href="#none">커피에반하다</a>
-              <ul class="tablet-sub-menu">
-                <li><a href="#none">브랜드스토리</a></li>
-                <li><a href="#none">커피스토리</a></li>
-                <li><a href="#none">아카데미</a></li>
-                <li><a href="#none">R&D</a></li>
-                <li><a href="#none">연혁</a></li>
-                <li><a href="#none">오시는길</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#none">메뉴</a>
-              <ul class="tablet-sub-menu">
-                <li><a href="#none">커피에반하다</a></li>
-                <li><a href="#none">스마트카페</a></li>
-                <li><a href="#none">커피에반하다24</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#none">매장안내</a>
-              <ul class="tablet-sub-menu">
-                <li><a href="#none">매장 찾기</a></li>
-                <li><a href="#none">신규매장</a></li>
-                <li><a href="#none">오픈예정매장</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#none">멤버십</a>
-              <ul class="tablet-sub-menu">
-                <li><a href="#none">톨게이트APP</a></li>
-                <li><a href="#none">FAQ</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#none">커뮤니티</a>
-              <ul class="tablet-sub-menu">
-                <li><a href="#none">이벤트</a></li>
-                <li><a href="#none">커반소식</a></li>
-                <li><a href="#none">영상</a></li>
-                <li><a href="#none">SNS</a></li>
-                <li><a href="#none">고객의 소리</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#none">프랜차이즈</a>
-              <ul class="tablet-sub-menu">
-                <li><a href="#none">커피에반하다</a></li>
-                <li><a href="#none">스마트카페</a></li>
-                <li><a href="#none">개설문의</a></li>
-                <li><a href="#none">창업설명회</a></li>
-                <li><a href="#none">FAQ</a></li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
       </div>
-    </header>
-    <!--pc버전 서브메뉴-->
-    <div class="gnb-pc-sub-menu pc-nav">
-      <div class="wrap">
-        <div class="pc-sub-menu-list">
-          <ul class="pc-sub-menu">
-            <li><a href="#none">브랜드스토리</a></li>
-            <li><a href="#none">커피스토리</a></li>
-            <li><a href="#none">아카데미</a></li>
-            <li><a href="#none">R&D</a></li>
-            <li><a href="#none">연혁</a></li>
-            <li><a href="#none">오시는길</a></li>
-          </ul>
-          <ul class="pc-sub-menu">
-            <li><a href="#none">커피에반하다</a></li>
-            <li><a href="#none">스마트카페</a></li>
-            <li><a href="#none">커피에반하다24</a></li>
-          </ul>
-          <ul class="pc-sub-menu">
-            <li><a href="#none">매장 찾기</a></li>
-            <li><a href="#none">신규매장</a></li>
-            <li><a href="#none">오픈예정매장</a></li>
-          </ul>
-          <ul class="pc-sub-menu">
-            <li><a href="#none">톨게이트APP</a></li>
-            <li><a href="#none">FAQ</a></li>
-          </ul>
-          <ul class="pc-sub-menu">
-            <li><a href="#none">이벤트</a></li>
-            <li><a href="#none">커반소식</a></li>
-            <li><a href="#none">영상</a></li>
-            <li><a href="#none">SNS</a></li>
-            <li><a href="#none">고객의 소리</a></li>
-          </ul>
-          <ul class="pc-sub-menu">
-            <li><a href="#none">커피에반하다</a></li>
-            <li><a href="#none">스마트카페</a></li>
-            <li><a href="#none">개설문의</a></li>
-            <li><a href="#none">창업설명회</a></li>
-            <li><a href="#none">FAQ</a></li>
-          </ul>
+      <div class="brand-item">
+        <img src="/images/brand-info/best-info-item02.png" alt="매장찾기" />
+        <div class="brand-title">
+          <h1>STORE</h1>
+          <p>원하시는 지역의 매장을 자유롭게 검색해보세요</p>
+          <div class="store-search-btn">
+            <input type="text" placeholder="동/지역명 등으로 검색" />
+            <button>
+              <img src="/images/brand-info/search-icon.png" alt="검색하기" />
+            </button>
+          </div>
         </div>
       </div>
     </div>
-    <!-- main-slide -->
-    <section class="main-slide">
-      <div class="slide-item">
-        <a href="#none" class="item"
-          ><img
-            src="/images/main-slide/pc-slide_01.jpg"
-            alt="빛이나는 SOLO 빙수"
-          />
-        </a>
-        <a href="#none" class="item">
-          <img src="/images/main-slide/pc-slide_02.jpg" alt="여름한정메뉴" />
-        </a>
-        <a href="#none" class="item">
-          <img
-            src="/images/main-slide/pc-slide_03.jpg"
-            alt="스마트카페 전용 티타임"
-          />
-        </a>
-        <a href="#none" class="item">
-          <img
-            src="/images/main-slide/pc-slide_04.jpg"
-            alt="Light and Delight"
-          />
-        </a>
+  </section>
+  <!-- franchise -->
+  <section class="franchise">
+    <div class="wrap">
+      <div class="section-title section-title-pc">
+        <h1>FRANCHISE</h1>
+        <p>
+          4無정책으로 끝까지 착한 커피에반하다<br />
+          창업문의 1522-4228
+        </p>
       </div>
-      <ul class="slide-btn">
-        <li class="on"></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </section>
-    <!-- best-menu -->
-    <section class="best-menu">
-      <div class="wrap">
-        <div class="section-title">
-          <h1>BEST MENU</h1>
-          <p>가장 인기있는 메뉴를 즐겨보세요</p>
-        </div>
-        <div class="best-menu-items">
-          <div class="best-menu-item-inner">
-            <div class="best-menu-item active">
-              <img src="/images/best-menu/menu01.png" alt="아이스아메리카노" />
-              <p>아이스 아메리카노</p>
-            </div>
-            <div class="best-menu-item">
-              <img src="/images/best-menu/menu02.png" alt="아이스아메리카노" />
-              <p>아이스 카페라테</p>
-            </div>
-            <div class="best-menu-item">
-              <img src="/images/best-menu/menu03.png" alt="아이스아메리카노" />
-              <p>살구자두 히비스 에이드</p>
-            </div>
-            <div class="best-menu-item">
-              <img src="/images/best-menu/menu04.png" alt="아이스아메리카노" />
-              <p>라이트 초코 쉐이크</p>
-            </div>
-          </div>
-        </div>
-        <a href="#none" class="more-btn">MORE</a>
+      <div class="section-title section-title-moblie">
+        <h1>FRANCHISE</h1>
+        <p>
+          4無정책으로 끝까지 착한<br />커피에반하다<br />
+          창업문의 1522-4228
+        </p>
       </div>
-    </section>
-    <!-- brand-info -->
-    <section class="brand-info">
-      <div class="wrap">
-        <div class="brand-item">
-          <img src="/images/brand-info/best-info-item01.png" alt="커피의비밀" />
-          <div class="brand-title">
-            <h1>CURBAN ROASTING</h1>
-            <p>맛있는 커피에반하다 커피의 비밀</p>
-            <a href="#none" class="more-btn">MORE</a>
-          </div>
+      <div class="franchise-item-inner">
+        <div class="franchise-item">
+          <img src="/images/franchise/franchise-icon01.png" alt="브랜드스토리" />
+          <p>브랜드스토리</p>
         </div>
-        <div class="brand-item">
-          <img src="/images/brand-info/best-info-item02.png" alt="매장찾기" />
-          <div class="brand-title">
-            <h1>STORE</h1>
-            <p>원하시는 지역의 매장을 자유롭게 검색해보세요</p>
-            <div class="store-search-btn">
-              <input type="text" placeholder="동/지역명 등으로 검색" />
-              <button>
-                <img src="/images/brand-info/search-icon.png" alt="검색하기" />
-              </button>
-            </div>
-          </div>
+        <div class="franchise-item">
+          <img src="/images/franchise/franchise-icon02.png" alt="스마트카페" />
+          <p>스마트카페</p>
+        </div>
+        <div class="franchise-item">
+          <img src="/images/franchise/franchise-icon03.png" alt="개설상담" />
+          <p>개설상담</p>
+        </div>
+        <div class="franchise-item">
+          <img src="/images/franchise/franchise-icon04.png" alt="창업설명회" />
+          <p>창업설명회</p>
+        </div>
+        <div class="franchise-item">
+          <img src="/images/franchise/franchise-icon05.png" alt="홍보영상" />
+          <p>홍보영상</p>
         </div>
       </div>
-    </section>
-    <!-- franchise -->
-    <section class="franchise">
-      <div class="wrap">
-        <div class="section-title section-title-pc">
-          <h1>FRANCHISE</h1>
+    </div>
+  </section>
+  <!-- notice -->
+  <section class="notice">
+    <div class="wrap">
+      <div class="section-title">
+        <h1>NOTICE</h1>
+        <p>커피에반하다의 소식을 알려드립니다.</p>
+      </div>
+      <div class="notice-item-inner">
+        <div class="notice-item">
+          <p>커피에반하다, 여름철 혼빙족 겨냥한 싱글빙수 4종 출시</p>
+          <span>2023.06.09</span>
+        </div>
+        <div class="notice-item">
+          <p>커피에반하다, 살구-자두 활용한 여름 신메뉴 5종 출시</p>
+          <span>2023.06.07</span>
+        </div>
+        <div class="notice-item">
+          <p>커피에반하다, 당-칼로리 줄인 신메뉴 “라이트 시럽 활용”</p>
+          <span>2023.04.26</span>
+        </div>
+        <div class="notice-item">
+          <p>커피에반하다, 부산서 창업설명회 스마트카페 창업소개</p>
+          <span>2023.04.20</span>
+        </div>
+      </div>
+      <div class="notice-item-inner notice-moblie">
+        <div class="notice-item">
+          <p>커피에반하다, 여름철 혼빙족 겨냥한 싱글빙수 4종 출시</p>
+          <span>2023.06.09</span>
+        </div>
+        <div class="notice-item">
+          <p>커피에반하다, 살구-자두 활용한 여름 신메뉴 5종 출시</p>
+          <span>2023.06.07</span>
+        </div>
+        <div class="notice-item">
+          <p>커피에반하다, 당-칼로리 줄인 신메뉴 “라이트 시럽 활용”</p>
+          <span>2023.04.26</span>
+        </div>
+        <div class="notice-item">
+          <p>커피에반하다, 부산서 창업설명회 스마트카페 창업소개</p>
+          <span>2023.04.20</span>
+        </div>
+      </div>
+      <span class="notice-more-btn">더보기</span>
+    </div>
+
+    </div>
+  </section>
+  <!-- awards -->
+  <section class="award">
+    <div class="award-item-inner">
+      <div class="award-item">
+        <img src="/images/award/award01.png" alt="어워드" />
+        <p>제20회<br />한국프랜차이즈대상</p>
+      </div>
+      <div class="award-item">
+        <img src="/images/award/award02.png" alt="어워드" />
+        <p>대한민국 커피산업<br />대상</p>
+      </div>
+      <div class="award-item">
+        <img src="/images/award/award03.png" alt="어워드" />
+        <p>경기도 유망<br />중소기업 선정</p>
+      </div>
+      <div class="award-item">
+        <img src="/images/award/award04.png" alt="어워드" />
+        <p>행복경영<br />대상 우수상</p>
+      </div>
+      <div class="award-item">
+        <img src="/images/award/award05.png" alt="어워드" />
+        <p>경기가족 친화<br />일하기 좋은 기업</p>
+      </div>
+      <div class="award-item">
+        <img src="/images/award/award06.png" alt="어워드" />
+        <p>대한민국<br />상생발전 대상</p>
+      </div>
+      <div class="award-item">
+        <img src="/images/award/award07.png" alt="어워드" />
+        <p>중소기업 경영혁신<br />공모전 우수상</p>
+      </div>
+      <div class="award-item">
+        <img src="/images/award/award08.png" alt="어워드" />
+        <p>한국 프랜차이즈<br />협회장상</p>
+      </div>
+      <div class="award-item">
+        <img src="/images/award/award09.png" alt="어워드" />
+        <p>식품의약품안전처<br />표창</p>
+      </div>
+      <div class="award-item">
+        <img src="/images/award/award10.png" alt="어워드" />
+        <p>제21회<br />한국프랜차이즈 대상</p>
+      </div>
+      <div class="award-item">
+        <img src="/images/award/award11.png" alt="어워드" />
+        <p>가족친화<br />인증기업 선정</p>
+      </div>
+      <div class="award-item">
+        <img src="/images/award/award12.png" alt="어워드" />
+        <p>2022 <br />대한민국 퍼스트 브랜드 대상</p>
+      </div>
+      <div class="award-item">
+        <img src="/images/award/award13.png" alt="어워드" />
+        <p>2023<br />대한민국 퍼스트 브랜드 대상</p>
+      </div>
+    </div>
+  </section>
+  <!-- footer -->
+  <footer>
+    <ul class="footer-top">
+      <li><a href="#none">개인정보처리방침</a></li>
+      <li><a href="#none">이용약관</a></li>
+      <li><a href="#none">사이트맵</a></li>
+      <li><a href="#none">오시는길</a></li>
+    </ul>
+    <div class="wrap">
+      <div class="footer-bottom">
+        <img src="/images/footer/logo.png" alt="커피에반하다" />
+        <div class="footer-copy-info">
           <p>
-            4無정책으로 끝까지 착한 커피에반하다<br />
-            창업문의 1522-4228
+            <span>주소 : 경기도 파주시 지목로 9(신촌동 440) </span>
+            <span>대표전화 : 1522-4228</span>
+            <span>FAX : 02-1234-5678</span>
           </p>
-        </div>
-        <div class="section-title section-title-moblie">
-          <h1>FRANCHISE</h1>
           <p>
-            4無정책으로 끝까지 착한<br />커피에반하다<br />
-            창업문의 1522-4228
+            <span>(주)커피에반하다</span>
+            <span>사업자등록번호 : 141-81-35978 </span>
+            <span>대표이사 : 임은성</span>
           </p>
-        </div>
-        <div class="franchise-item-inner">
-          <div class="franchise-item">
-            <img
-              src="/images/franchise/franchise-icon01.png"
-              alt="브랜드스토리"
-            />
-            <p>브랜드스토리</p>
-          </div>
-          <div class="franchise-item">
-            <img
-              src="/images/franchise/franchise-icon02.png"
-              alt="스마트카페"
-            />
-            <p>스마트카페</p>
-          </div>
-          <div class="franchise-item">
-            <img src="/images/franchise/franchise-icon03.png" alt="개설상담" />
-            <p>개설상담</p>
-          </div>
-          <div class="franchise-item">
-            <img
-              src="/images/franchise/franchise-icon04.png"
-              alt="창업설명회"
-            />
-            <p>창업설명회</p>
-          </div>
-          <div class="franchise-item">
-            <img src="/images/franchise/franchise-icon05.png" alt="홍보영상" />
-            <p>홍보영상</p>
-          </div>
+          <p>COPYRIGHTⓒ 커피에반하다 INC. ALL RIGHTS RESERVED</p>
         </div>
       </div>
-    </section>
-    <!-- notice -->
-    <section class="notice">
-      <div class="wrap">
-        <div class="section-title">
-          <h1>NOTICE</h1>
-          <p>커피에반하다의 소식을 알려드립니다.</p>
-        </div>
-        <div class="notice-item-inner">
-          <div class="notice-item">
-            <p>커피에반하다, 여름철 혼빙족 겨냥한 싱글빙수 4종 출시</p>
-            <span>2023.06.09</span>
-          </div>
-          <div class="notice-item">
-            <p>커피에반하다, 살구-자두 활용한 여름 신메뉴 5종 출시</p>
-            <span>2023.06.07</span>
-          </div>
-          <div class="notice-item">
-            <p>커피에반하다, 당-칼로리 줄인 신메뉴 “라이트 시럽 활용”</p>
-            <span>2023.04.26</span>
-          </div>
-          <div class="notice-item">
-            <p>커피에반하다, 부산서 창업설명회 스마트카페 창업소개</p>
-            <span>2023.04.20</span>
-          </div>
-        </div>
-        <span class="notice-more-btn">더보기</span>
+    </div>
+    <div class="footer-float-content">
+      <div class="footer-franchise">
+        <p>창업문의<span>1522-4228</span></p>
       </div>
-    </section>
-    <!-- awards -->
-    <section class="award">
-      <div class="award-item-inner">
-        <div class="award-item">
-          <img src="/images/award/award01.png" alt="어워드" />
-          <p>제20회<br />한국프랜차이즈대상</p>
-        </div>
-        <div class="award-item">
-          <img src="/images/award/award02.png" alt="어워드" />
-          <p>대한민국 커피산업<br />대상</p>
-        </div>
-        <div class="award-item">
-          <img src="/images/award/award03.png" alt="어워드" />
-          <p>경기도 유망<br />중소기업 선정</p>
-        </div>
-        <div class="award-item">
-          <img src="/images/award/award04.png" alt="어워드" />
-          <p>행복경영<br />대상 우수상</p>
-        </div>
-        <div class="award-item">
-          <img src="/images/award/award05.png" alt="어워드" />
-          <p>경기가족 친화<br />일하기 좋은 기업</p>
-        </div>
-        <div class="award-item">
-          <img src="/images/award/award06.png" alt="어워드" />
-          <p>대한민국<br />상생발전 대상</p>
-        </div>
-        <div class="award-item">
-          <img src="/images/award/award07.png" alt="어워드" />
-          <p>중소기업 경영혁신<br />공모전 우수상</p>
-        </div>
-        <div class="award-item">
-          <img src="/images/award/award08.png" alt="어워드" />
-          <p>한국 프랜차이즈<br />협회장상</p>
-        </div>
-        <div class="award-item">
-          <img src="/images/award/award09.png" alt="어워드" />
-          <p>식품의약품안전처<br />표창</p>
-        </div>
-        <div class="award-item">
-          <img src="/images/award/award10.png" alt="어워드" />
-          <p>제21회<br />한국프랜차이즈 대상</p>
-        </div>
-        <div class="award-item">
-          <img src="/images/award/award11.png" alt="어워드" />
-          <p>가족친화<br />인증기업 선정</p>
-        </div>
-        <div class="award-item">
-          <img src="/images/award/award12.png" alt="어워드" />
-          <p>2022 <br />대한민국 퍼스트 브랜드 대상</p>
-        </div>
-        <div class="award-item">
-          <img src="/images/award/award13.png" alt="어워드" />
-          <p>2023<br />대한민국 퍼스트 브랜드 대상</p>
-        </div>
+      <div class="sns-icon">
+        <a href="#none"><img src="/images/footer/sns-instagram.png" alt="인스타그램 바로가기" /></a>
+        <a href="#none"><img src="/images/footer/sns-facebook.png" alt="페이스북 바로가기" /></a>
+        <a href="#none"><img src="/images/footer/sns-youtube.png" alt="유튜브 바로가기" /></a>
+        <a href="#none"><img src="/images/footer/sns-naverBlog.png" alt="네이버블로그 바로가기" /></a>
       </div>
-    </section>
-    <!-- footer -->
-    <footer>
-      <ul class="footer-top">
-        <li><a href="#none">개인정보처리방침</a></li>
-        <li><a href="#none">이용약관</a></li>
-        <li><a href="#none">사이트맵</a></li>
-        <li><a href="#none">오시는길</a></li>
-      </ul>
-      <div class="wrap">
-        <div class="footer-bottom">
-          <img src="/images/footer/logo.png" alt="커피에반하다" />
-          <div class="footer-copy-info">
-            <p>
-              <span>주소 : 경기도 파주시 지목로 9(신촌동 440) </span>
-              <span>대표전화 : 1522-4228</span>
-              <span>FAX : 02-1234-5678</span>
-            </p>
-            <p>
-              <span>(주)커피에반하다</span>
-              <span>사업자등록번호 : 141-81-35978 </span>
-              <span>대표이사 : 임은성</span>
-            </p>
-            <p>COPYRIGHTⓒ 커피에반하다 INC. ALL RIGHTS RESERVED</p>
-          </div>
-        </div>
-      </div>
-      <div class="footer-float-content">
-        <div class="footer-franchise">
-          <p>창업문의<span>1522-4228</span></p>
-        </div>
-        <div class="sns-icon">
-          <a href="#none"
-            ><img
-              src="/images/footer/sns-instagram.png"
-              alt="인스타그램 바로가기"
-          /></a>
-          <a href="#none"
-            ><img src="/images/footer/sns-facebook.png" alt="페이스북 바로가기"
-          /></a>
-          <a href="#none"
-            ><img src="/images/footer/sns-youtube.png" alt="유튜브 바로가기"
-          /></a>
-          <a href="#none"
-            ><img
-              src="/images/footer/sns-naverBlog.png"
-              alt="네이버블로그 바로가기"
-          /></a>
-        </div>
-      </div>
-    </footer>
-    <script src="/script.js"></script>
-  </body>
+    </div>
+  </footer>
+  <script src="/script.js"></script>
+</body>
+
 </html>
