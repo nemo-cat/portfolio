@@ -33,6 +33,7 @@
 
           $(".best-menu-item").css("width", "23%");
           $(".best-menu-item img").css("width", "100%");
+          $(".notice-mobile").css("display","none");
         } else if (widthSizing > 768) {
           // 태블릿 버전
           $(".gnb-pc-sub-menu").slideUp(10);
@@ -47,6 +48,7 @@
           }
           $(".best-menu-item").css("width", "48%");
           $(".best-menu-item img").css("width", "100%");
+          $(".notice-mobile").css("display","none");
         } else if (widthSizing < 768) {
           // 모바일 버전
           $(".tablet-gnb-menu-list").slideUp(10);
@@ -58,6 +60,22 @@
               .children("img")
               .attr("src", "/images/main-slide/moblie_slide_0" + (i + 1) + ".jpg");
           }
+
+          // 공지사항 fade in - fade out
+          $(".notice-mobile").css("display","block");
+          $(".notice-mobile .notice-item").eq(0).siblings().hide();
+          let noticeIdx = 0;
+          let noticeCount = $(".notice-mobile .notice-item").length - 1;
+
+          function noticeFade() {
+            $(".notice-mobile .notice-item").eq(noticeIdx).fadeIn();
+            $(".notice-mobile .notice-item").eq(noticeIdx).siblings().fadeOut();
+            noticeIdx++;
+            if (noticeIdx > noticeCount) {
+              noticeIdx = 0;
+            }
+          }
+          setInterval(noticeFade, 3000);
         }
       }, delay);
     });
@@ -285,19 +303,6 @@
     }
     setInterval(slideLeft, 4000);
 
-    // 공지사항 fade in - fade out
-    $(".notice-moblie .notice-item").eq(0).siblings().hide();
-    let noticeIdx = 0;
-    let noticeCount = $(".notice-moblie .notice-item").length - 1;
 
-    function noticeFade() {
-      $(".notice-moblie .notice-item").eq(noticeIdx).fadeIn();
-      $(".notice-moblie .notice-item").eq(noticeIdx).siblings().fadeOut();
-      noticeIdx++;
-      if (noticeIdx > noticeCount) {
-        noticeIdx = 0;
-      }
-    }
-    setInterval(noticeFade, 3000);
 
   });

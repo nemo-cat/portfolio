@@ -455,7 +455,7 @@ header .wrap>a>img {
 
 /*notice*/
 
-.notice-moblie {
+.notice-mobile {
   display: none;
 }
 
@@ -757,7 +757,7 @@ footer .wrap {
   /*franchise*/
 
   /*notice*/
-  .notice-moblie {
+  .notice-mobile {
     display: none;
   }
 
@@ -1027,7 +1027,7 @@ footer .wrap {
     position: relative;
   }
 
-  .notice-moblie {
+  .notice-mobile {
     display: block;
   }
 
