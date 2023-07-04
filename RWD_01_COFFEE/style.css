@@ -584,12 +584,14 @@ footer .wrap {
   display: flex;
   width: 100%;
   justify-content: center;
-  border-bottom: 1px solid #b7b7b7;
+  border-bottom: 1px solid #999;
 }
 
 .footer-top li a {
   display: inline-block;
   padding: 20px;
+  font-size: 16px;
+  color: #999;
 }
 
 .footer-bottom {
@@ -606,7 +608,8 @@ footer .wrap {
 
 .footer-copy-info p {
   margin-bottom: 10px;
-  font-size: 14px;
+  font-size: 16px;
+  color: #999;
 }
 
 .footer-copy-info p :last-child {
@@ -969,6 +972,7 @@ footer .wrap {
     flex-flow: column;
     align-items: center;
     margin-top: 30px;
+    text-align: center;
   }
 
   .brand-title h1 {
@@ -1029,6 +1033,7 @@ footer .wrap {
 
   .notice-mobile {
     display: block;
+
   }
 
   .notice-item {
@@ -1048,12 +1053,10 @@ footer .wrap {
   }
 
   /*footer*/
-  footer {
-    font-size: 14px;
-  }
 
   footer .wrap {
     padding: 0 20px;
+
   }
 
   .footer-top {
@@ -1061,7 +1064,7 @@ footer .wrap {
     flex-flow: row wrap;
     justify-content: center;
     padding: 10px 0;
-    border-bottom: 1px solid #b7b7b7;
+    border-bottom: 1px solid #999;
   }
 
   .footer-top li {
@@ -1073,14 +1076,20 @@ footer .wrap {
 
   .footer-top li a {
     display: inline-block;
-    padding: 20px;
+    padding: 15px;
     box-sizing: border-box;
+    font-size: 14px;
+    color: #999;
     white-space: pre;
   }
 
   .footer-bottom {
     margin-bottom: 20px;
     text-align: center;
+  }
+
+  .footer-bottom p {
+    font-size: 14px;
   }
 }
 
