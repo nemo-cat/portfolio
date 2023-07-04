@@ -33,7 +33,7 @@
 
           $(".best-menu-item").css("width", "23%");
           $(".best-menu-item img").css("width", "100%");
-          $(".notice-mobile").css("display","none");
+          $(".notice-mobile").css("display", "none");
         } else if (widthSizing > 768) {
           // 태블릿 버전
           $(".gnb-pc-sub-menu").slideUp(10);
@@ -48,7 +48,7 @@
           }
           $(".best-menu-item").css("width", "48%");
           $(".best-menu-item img").css("width", "100%");
-          $(".notice-mobile").css("display","none");
+          $(".notice-mobile").css("display", "none");
         } else if (widthSizing < 768) {
           // 모바일 버전
           $(".tablet-gnb-menu-list").slideUp(10);
@@ -62,7 +62,7 @@
           }
 
           // 공지사항 fade in - fade out
-          $(".notice-mobile").css("display","block");
+          $(".notice-mobile").css("display", "block");
           $(".notice-mobile .notice-item").eq(0).siblings().hide();
           let noticeIdx = 0;
           let noticeCount = $(".notice-mobile .notice-item").length - 1;
@@ -102,6 +102,30 @@
         height: "auto"
       });
     });
+
+    //bg 클릭시 서브 메뉴 닫힘
+    $(".back-bg").click(function () {
+      // 피씨 서브메뉴
+      $(".gnb-pc-sub-menu").slideUp();
+      // 태블릿, 모바일 서브메뉴
+      $(".tablet-gnb-menu-list").slideUp();
+      $(".tablet-gnb-menu li a")
+        .parent()
+        .siblings("li")
+        .children(".tablet-sub-menu")
+        .slideUp();
+      $(".tablet-gnb-menu li a")
+        .parent()
+        .siblings("li")
+        .children("a")
+        .removeClass("active");
+      // 스크롤 방지 해제
+      $(".back-bg ").removeClass("active");
+      $("html, body").css({
+        overflow: "visible",
+        height: "auto"
+      });
+    })
 
     //서브메뉴에 mouseover시 해당 메인메뉴 색상 변경
     $(".pc-sub-menu").mouseover(function () {
