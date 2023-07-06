@@ -81,32 +81,21 @@
     });
 
     /* ====================== 피씨 네비게이션 ======================  */
+    $(".notice-mobile").css("display", "none");
     //메인메뉴에 마우스 올리면 다음 실행
     $(".gnb-pc-main-menu li a").mouseover(function () {
       $(".gnb-pc-sub-menu").slideDown(); // 서브메뉴 내려옴
       $(".back-bg ").addClass("active"); // 뒷배경 어둡게
-      // 스크롤 방지
-      $("html, body").css({
-        overflow: "hidden",
-        height: "100%"
-      });
     });
 
     // 서브메뉴에서 마우스 나가면 다음 실행 
     $(".gnb-pc-sub-menu").mouseleave(function () {
       $(".gnb-pc-sub-menu").slideUp(); // 서브메뉴 올라감
       $(".back-bg ").removeClass("active"); // 뒷배경 삭제
-      // 스크롤 방지 해제
-      $("html, body").css({
-        overflow: "visible",
-        height: "auto"
-      });
     });
 
     //bg 클릭시 서브 메뉴 닫힘
     $(".back-bg").click(function () {
-      // 피씨 서브메뉴
-      $(".gnb-pc-sub-menu").slideUp();
       // 태블릿, 모바일 서브메뉴
       $(".tablet-gnb-menu-list").slideUp();
       $(".tablet-gnb-menu li a")
@@ -136,6 +125,10 @@
         .siblings()
         .children("a")
         .removeClass("on");
+    });
+
+    $(".pc-sub-menu").mouseleave(function () {
+      $(".gnb-pc-main-menu li a").removeClass("on");
     });
 
     /* ====================== 태블릿, 모바일 네비게이션 ======================  */
