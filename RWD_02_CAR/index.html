@@ -5,24 +5,274 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BMW</title>
+  <!-- link swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <!-- link css -->
   <link rel="stylesheet" href="/style/reset.css">
+  <link rel="stylesheet" href="/style/headerFooter.css">
   <link rel="stylesheet" href="/style/mainStyle.css">
-  <!-- link js-->
+  <!-- link swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <!-- link jqeury-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 
 <body>
   <!-- header -->
   <header>
-    <div class="gnb-menu">
-      <div class="main-menu">메인메뉴</div>
-      <div class="sub-menu">서브메뉴</div>
+    <!-- pc header -->
+    <div class="header-pc">
+      <div class="wrap header-wrap">
+        <div class="header-inner">
+          <div class="header-logo"><img src="/images/main/icons/logo-wihite.png" alt="BMW"></div>
+          <div class="gnb-main-menu">
+            <ul class="main-menu-pc">
+              <li><a href="#none">Models</a></li>
+              <li><a href="#none">전기차</a></li>
+              <li><a href="#none">내 차량 만들기</a></li>
+              <li><a href="#none">구매하기</a></li>
+              <li><a href="#none">더 알아보기</a></li>
+              <li><a href="#none">BMW 드라이빙 센터</a></li>
+            </ul>
+          </div>
+          <ul class="header-ico-list">
+            <li><a href="#none"><img src="/images/main/icons/icon-search.png" alt="검색하기"></a></li>
+            <li><a href="#none"><img src="/images/main/icons/icon-place.png" alt="딜러찾기"></a></li>
+            <li><a href="#none"><img src="/images/main/icons/icon-myPage.png" alt="마이페이지"></a></li>
+            <li><a href="#none"><img src="/images/main/icons/icon-cart.png" alt="장바구니"></a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- pc sub menu -->
+      <div class="wrap sub-menu-wrap">
+        <div class="sub-menu-inner">
+          <div id="sub-electricCar" class="sub-menu-list">
+            <h3 class="sub-menu-title">전기차</h3>
+            <div class="sub-electircCar-inner">
+              <div class="sub-electircCar-item">
+                <div class="sub-electircCar-item-title">
+                  <span>SAV</span>
+                  <h3>iX</h3>
+                </div>
+                <div class="sub-electircCar-item-img">
+                  <img src="/images/headerFooter/sub-menu/electric-car/electric-car-01.png" alt="iX">
+                </div>
+              </div>
+              <div class="sub-electircCar-item">
+                <div class="sub-electircCar-item-title">
+                  <span>SAV</span>
+                  <h3>iX</h3>
+                  <span>M60</span>
+                </div>
+                <div class="sub-electircCar-item-img">
+                  <img src="/images/headerFooter/sub-menu/electric-car/electric-car-02.png" alt="iXM60">
+                </div>
+              </div>
+              <div class="sub-electircCar-item">
+                <div class="sub-electircCar-item-title">
+                  <span>세단</span>
+                  <h3>i7</h3>
+                </div>
+                <div class="sub-electircCar-item-img">
+                  <img src="/images/headerFooter/sub-menu/electric-car/electric-car-03.png" alt="i7">
+                </div>
+              </div>
+              <div class="sub-electircCar-item">
+                <div class="sub-electircCar-item-title">
+                  <span>세단</span>
+                  <h3>i7</h3>
+                  <span class="new-sticker">new</span>
+                  <span>M70</span>
+                </div>
+                <div class="sub-electircCar-item-img">
+                  <img src="/images/headerFooter/sub-menu/electric-car/electric-car-04.png" alt="i7M70">
+                </div>
+              </div>
+              <div class="sub-electircCar-item">
+                <div class="sub-electircCar-item-title">
+                  <span>세단</span>
+                  <h3>i5</h3>
+                  <span class="new-sticker">new</span>
+                </div>
+                <div class="sub-electircCar-item-img">
+                  <img src="/images/headerFooter/sub-menu/electric-car/electric-car-05.png" alt="i5">
+                </div>
+              </div>
+              <div class="sub-electircCar-item">
+                <div class="sub-electircCar-item-title">
+                  <span>세단</span>
+                  <h3>i5</h3>
+                  <span class="new-sticker">new</span>
+                  <span>M60</span>
+                </div>
+                <div class="sub-electircCar-item-img">
+                  <img src="/images/headerFooter/sub-menu/electric-car/electric-car-06.png" alt="i5M60">
+                </div>
+              </div>
+              <div class="sub-electircCar-item">
+                <div class="sub-electircCar-item-title">
+                  <span>그란 쿠페</span>
+                  <h3>i4</h3>
+                </div>
+                <div class="sub-electircCar-item-img">
+                  <img src="/images/headerFooter/sub-menu/electric-car/electric-car-07.png" alt="i4">
+                </div>
+              </div>
+              <div class="sub-electircCar-item">
+                <div class="sub-electircCar-item-title">
+                  <span>그란 쿠페</span>
+                  <h3>i4</h3>
+                  <span>M50</span>
+                </div>
+                <div class="sub-electircCar-item-img">
+                  <img src="/images/headerFooter/sub-menu/electric-car/electric-car-08.png" alt="i4M50">
+                </div>
+              </div>
+              <div class="sub-electircCar-item">
+                <div class="sub-electircCar-item-title">
+                  <span>SAV</span>
+                  <h3>iX3</h3>
+                </div>
+                <div class="sub-electircCar-item-img">
+                  <img src="/images/headerFooter/sub-menu/electric-car/electric-car-09.png" alt="iX3">
+                </div>
+              </div>
+              <div class="sub-electircCar-item">
+                <div class="sub-electircCar-item-title">
+                  <span>SAV</span>
+                  <h3>iX1</h3>
+                  <span class="new-sticker">new</span>
+                </div>
+                <div class="sub-electircCar-item-img">
+                  <img src="/images/headerFooter/sub-menu/electric-car/electric-car-10.png" alt="iX1">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <!-- pc sub menu 
+      <div class="wrap header-wrap">
+        <div class="gnb-sub-menu">
+          <div class="sub-menu-pc">
+            <ul class="sub-menu-pc-list">
+              <li><a href="#none">전체보기</a></li>
+              <li><a href="#none">i 시리즈</a></li>
+              <li><a href="#none">X 시리즈</a></li>
+              <li><a href="#none">M 시리즈</a></li>
+              <li><a href="#none">일반모델</a></li>
+            </ul>
+            <ul class="sub-menu-pc-list">
+              <li><a href="#none">내 차량 찾기</a></li>
+              <li><a href="#none">BMW 공식 인증<br>중고차</a></li>
+              <li><a href="#none">BMW 샵 온라인</a></li>
+              <li><a href="#none">BMW 커넥티드<br>드라이브 스토어</a></li>
+              <li><a href="#none">트레이드인/로열티<br>프로그램</a></li>
+              <li><a href="#none">법인판매/스페셜<br>세일즈</a></li>
+            </ul>
+            <ul class="sub-menu-pc-list">
+              <li><a href="#none">BMW E-모빌리티</a></li>
+              <li><a href="#none">BMW i</a></li>
+            </ul>
+            <ul class="sub-menu-pc-list">
+              <li><a href="#none">BMW 서비스</a></li>
+              <li><a href="#none">BMW 서비스<br>프로그램</a></li>
+              <li><a href="#none">BMW 오리지널<br>부품&amp;리콜정보</a></li>
+              <li><a href="#none">BMW 오리지널<br>액세서리</a></li>
+              <li><a href="#none">BMW 커넥티드<br>드라이브</a></li>
+              <li><a href="#none">리모트 소프트웨어<br>업그레이드</a></li>
+              <li><a href="#none">MY BMW APPS</a></li>
+            </ul>
+            <ul class="sub-menu-pc-list">
+              <li><a href="#none">BMW 캠페인</a></li>
+              <li><a href="#none">BMW M</a></li>
+              <li><a href="#none">BMW X RANGE</a></li>
+              <li><a href="#none">BMW 골프 스포츠</a></li>
+              <li><a href="#none">BMW 액설런스 클럽</a></li>
+              <li><a href="#none">BMW 컨셉카</a></li>
+              <li><a href="#none">BMW 뉴스</a></li>
+              <li><a href="#none">기업소개</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      -->
+    </div>
+    <!-- tablet, mobile header -->
+    <div class="header-tablet">
+      <div class="wrap header-wrap">
+        <div class="header-inner">
+          <div class="logo">로고영역</div>
+          <div class="gnb-main-menu">
+            <ul class="main-menu-tablet">
+              <li><a href="#none">Models</a>
+                <ul class="sub-menu-tablet-list">
+                  <li><a href="#none">전체보기</a></li>
+                  <li><a href="#none">i 시리즈</a></li>
+                  <li><a href="#none">X 시리즈</a></li>
+                  <li><a href="#none">M 시리즈</a></li>
+                  <li><a href="#none">일반모델</a></li>
+                </ul>
+              </li>
+              <li><a href="#none">Find&amp;Buy</a>
+                <ul class="sub-menu-tablet-list">
+                  <li><a href="#none">내 차량 찾기</a></li>
+                  <li><a href="#none">BMW 공식 인증<br>중고차</a></li>
+                  <li><a href="#none">BMW 샵 온라인</a></li>
+                  <li><a href="#none">BMW 커넥티드<br>드라이브 스토어</a></li>
+                  <li><a href="#none">트레이드인/로열티<br>프로그램</a></li>
+                  <li><a href="#none">법인판매/스페셜<br>세일즈</a></li>
+                </ul>
+              </li>
+              <li><a href="#none">Electromobility</a>
+                <ul class="sub-menu-tablet-list">
+                  <li><a href="#none">BMW E-모빌리티</a></li>
+                  <li><a href="#none">BMW i</a></li>
+                </ul>
+              </li>
+              <li><a href="#none">Service</a>
+                <ul class="sub-menu-tablet-list">
+                  <li><a href="#none">BMW 서비스</a></li>
+                  <li><a href="#none">BMW 서비스<br>프로그램</a></li>
+                  <li><a href="#none">BMW 오리지널<br>부품&amp;리콜정보</a></li>
+                  <li><a href="#none">BMW 오리지널<br>액세서리</a></li>
+                  <li><a href="#none">BMW 커넥티드<br>드라이브</a></li>
+                  <li><a href="#none">리모트 소프트웨어<br>업그레이드</a></li>
+                  <li><a href="#none">MY BMW APPS</a></li>
+                </ul>
+              </li>
+              <li><a href="#none">Discover</a>
+                <ul class="sub-menu-tablet-list">
+                  <li><a href="#none">BMW 캠페인</a></li>
+                  <li><a href="#none">BMW M</a></li>
+                  <li><a href="#none">BMW X RANGE</a></li>
+                  <li><a href="#none">BMW 골프 스포츠</a></li>
+                  <li><a href="#none">BMW 액설런스 클럽</a></li>
+                  <li><a href="#none">BMW 컨셉카</a></li>
+                  <li><a href="#none">BMW 뉴스</a></li>
+                  <li><a href="#none">기업소개</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <ul class="header-ico-list">
+            <li><a href="#none"><img src="/images/main/icons/icon-search.png" alt="검색하기"></a></li>
+            <li><a href="#none"><img src="/images/main/icons/icon-place.png" alt="딜러찾기"></a></li>
+            <li><a href="#none"><img src="/images/main/icons/icon-myPage.png" alt="마이페이지"></a></li>
+            <li><a href="#none"><img src="/images/main/icons/icon-cart.png" alt="장바구니"></a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </header>
 
   <!-- slide -->
-  <section class="slide-section">슬라이드영역</section>
+  <section class="slide-section">
+    <video muted autoplay loop
+      src="/images/main/slide/[BMW] born BOLD_윤미래 편..mp4"></video>
+  </section>
 
   <!-- banner -->
   <section class="banner-section">
@@ -263,31 +513,158 @@
       <h1 class="section-title">
         새소식
       </h1>
-      <div class="news-inner news-inner-top">
-        <div class="news-item">
-          <img src="/images/main/news/news01.jpg" alt="#WhateverHappens 캠페인">
-          <div class="news-text">
-            <h3 class="news-title">#WhateverHappens 캠페인</h3>
-            <p>당신에게 어떤 일이 일어나든 모두 없던 일로,
-              BWM 서비스</p>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide news-item">
+            <img src="/images/main/news/news01.jpg" alt="#WhateverHappens 캠페인">
+            <div class="news-text">
+              <h3 class="news-title">#WhateverHappens 캠페인</h3>
+              <p>당신에게 어떤 일이 일어나든 모두 없던 일로,
+                BWM 서비스</p>
+            </div>
+          </div>
+          <div class="swiper-slide news-item">
+            <img src="/images/main/news/news02.jpg" alt="이미지">
+            <div class="news-text">
+              <h3 class="news-title">금융프로모션</h3>
+              <p>BMW의 다양한 금융 프로모션을 확인해 보세요</p>
+            </div>
+          </div>
+          <div class="swiper-slide news-item">
+            <img src="/images/main/news/news03.jpg" alt="이미지">
+            <div class="news-text">
+              <h3 class="news-title">My BMW Apps</h3>
+              <p>My BMW 앱과 함께 새로운 카 라이프로 BMW 세상과의 연결을 시작하세요</p>
+            </div>
+          </div>
+          <div class="swiper-slide news-item">
+            <img src="/images/main/news/news04.jpg" alt="이미지">
+            <div class="news-text">
+              <h3 class="news-title">BMW SERVICE CARE+ 론칭</h3>
+              <p>BMW를 더 오래, 한결같이 사용할 수
+                있는 차량 관리 구독 서비스</p>
+            </div>
+          </div>
+          <div class="swiper-slide news-item">
+            <img src="/images/main/news/news05.jpg" alt="이미지">
+            <div class="news-text">
+              <h3 class="news-title">THE 8 X JEFF KOONS</h3>
+              <p>BMW M850i xDrive 그란 쿠페와 유명
+                아티스트 제프쿤스의 콜라보레이션</p>
+            </div>
+          </div>
+          <div class="swiper-slide news-item">
+            <img src="/images/main/news/news06.jpg" alt="이미지">
+            <div class="news-text">
+              <h3 class="news-title">BMW 드라이빙 센터</h3>
+              <p>전 세계 최초 드라이빙 센터
+                드라이빙 이상의 즐거움을 느껴보세요</p>
+            </div>
+          </div>
+          <div class="swiper-slide news-item">
+            <img src="/images/main/news/news07.jpg" alt="이미지">
+            <div class="news-text">
+              <h3 class="news-title">BMW PLUS</h3>
+              <p>한층 업그레이드된 BMW PLUS 앱으로
+                간편하게 서비스를 예약해보세요</p>
+            </div>
+          </div>
+          <div class="swiper-slide news-item">
+            <img src="/images/main/news/news08.jpg" alt="이미지">
+            <div class="news-text">
+              <h3 class="news-title">BMW VANTAGE</h3>
+              <p>당신의 라이프 스타일에 즐거움을 전할
+                블록체인 기반 멤버십 서비스</p>
+            </div>
+          </div>
+          <div class="swiper-slide news-item">
+            <img src="/images/main/news/news09.jpg" alt="이미지">
+            <div class="news-text">
+              <h3 class="news-title">BMW 오리지널 부품 가격 조회</h3>
+              <p>BMW 부품 가격 정보를 조회 하실 수 있는
+                웹사이트</p>
+            </div>
           </div>
         </div>
-        <div class="news-item">
-          <img src="/images/main/news/news02.jpg" alt="이미지">
-          <div class="news-text">
-            <h3 class="news-title">금융프로모션</h3>
-            <p>BMW의 다양한 금융 프로모션을 확인해 보세요</p>
-          </div>
-        </div>
-        <div class="news-item">
-          <img src="/images/main/news/news03.jpg" alt="이미지">
-          <div class="news-text">
-            <h3 class="news-title">My BMW Apps</h3>
-            <p>My BMW 앱과 함께 새로운 카 라이프로 BMW 세상과의 연결을 시작하세요</p>
-          </div>
-        </div>
+        <!--buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
-      <div class="news-inner news-inner-bottom">
+      <!-- <div class="news-inner news-inner-top">
+        <div class="news-item-list">
+          <div class="news-item">
+            <img src="/images/main/news/news01.jpg" alt="#WhateverHappens 캠페인">
+            <div class="news-text">
+              <h3 class="news-title">#WhateverHappens 캠페인</h3>
+              <p>당신에게 어떤 일이 일어나든 모두 없던 일로,
+                BWM 서비스</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <img src="/images/main/news/news02.jpg" alt="이미지">
+            <div class="news-text">
+              <h3 class="news-title">금융프로모션</h3>
+              <p>BMW의 다양한 금융 프로모션을 확인해 보세요</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <img src="/images/main/news/news03.jpg" alt="이미지">
+            <div class="news-text">
+              <h3 class="news-title">My BMW Apps</h3>
+              <p>My BMW 앱과 함께 새로운 카 라이프로 BMW 세상과의 연결을 시작하세요</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <img src="/images/main/news/news04.jpg" alt="이미지">
+            <div class="news-text">
+              <h3 class="news-title">BMW SERVICE CARE+ 론칭</h3>
+              <p>BMW를 더 오래, 한결같이 사용할 수
+                있는 차량 관리 구독 서비스</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <img src="/images/main/news/news05.jpg" alt="이미지">
+            <div class="news-text">
+              <h3 class="news-title">THE 8 X JEFF KOONS</h3>
+              <p>BMW M850i xDrive 그란 쿠페와 유명
+                아티스트 제프쿤스의 콜라보레이션</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <img src="/images/main/news/news06.jpg" alt="이미지">
+            <div class="news-text">
+              <h3 class="news-title">BMW 드라이빙 센터</h3>
+              <p>전 세계 최초 드라이빙 센터
+                드라이빙 이상의 즐거움을 느껴보세요</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <img src="/images/main/news/news07.jpg" alt="이미지">
+            <div class="news-text">
+              <h3 class="news-title">BMW PLUS</h3>
+              <p>한층 업그레이드된 BMW PLUS 앱으로
+                간편하게 서비스를 예약해보세요</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <img src="/images/main/news/news08.jpg" alt="이미지">
+            <div class="news-text">
+              <h3 class="news-title">BMW VANTAGE</h3>
+              <p>당신의 라이프 스타일에 즐거움을 전할
+                블록체인 기반 멤버십 서비스</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <img src="/images/main/news/news09.jpg" alt="이미지">
+            <div class="news-text">
+              <h3 class="news-title">BMW 오리지널 부품 가격 조회</h3>
+              <p>BMW 부품 가격 정보를 조회 하실 수 있는
+                웹사이트</p>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <!-- <div class="news-inner news-inner-bottom">
         <div class="news-item">
           <img src="/images/main/news/news04.jpg" alt="이미지">
           <div class="news-text">
@@ -350,12 +727,63 @@
             <p>BMW 전기차와 플러그인 하이브리드 모델을 만나보세요</p>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </section>
 
   <!-- footer -->
-  <footer>푸터영역</footer>
+  <footer>
+    <div class="wrap footer-wrap">
+      <div class="footer-inner-top footer-inner">
+        <div class="footer-top-info-list">
+          <ul class="footer-top-info">
+            <span>BMW 코리아</span>
+            <li><a href="#none">인재채용</a></li>
+            <li><a href="#none">BMW 컨텍트</a></li>
+            <li><a href="#none">시스템 설정</a></li>
+            <li><a href="#none">소프트웨어 다운로드</a></li>
+            <li><a href="#none">BMW의 모든 웹사이트</a></li>
+          </ul>
+          <ul class="footer-top-info">
+            <span>연관채널</span>
+            <li><a href="#none">BWM.com</a></li>
+            <li><a href="#none">BMW 드라이빙 센터</a></li>
+            <li><a href="#none">BMW 코리아 미래재단</a></li>
+            <li><a href="#none">파이낸셜 서비스</a></li>
+          </ul>
+          <ul class="footer-top-info">
+            <span>법률 약관 정보</span>
+            <li><a href="#none">법적고지</a></li>
+            <li><a href="#none">쿠키 정책</a></li>
+            <li><a href="#none">영상정보처리기 운영 관리방침</a></li>
+            <li><a href="#none">커넥티드 드라이브 이용약관</a></li>
+            <li><a href="#none">서비스케어 플러스 이용약관</a></li>
+          </ul>
+          <ul class="footer-top-info">
+            <span>개인정보처리방침</span>
+            <li><a href="#none">개인정보처리방침</a></li>
+            <li><a href="#none">커넥티드 드라이브 개인정보 처리방침</a></li>
+            <li><a href="#none">BMW 멤버십 개인정보 처리방침</a></li>
+          </ul>
+        </div>
+        <ul class="footer-top-sns-ico">
+          <li><a href="#none"><img src="/images/headerFooter/footer/facebook-icon-off.png" alt="페이스북 바로가기"></a></li>
+          <li><a href="#none"><img src="/images/headerFooter/footer/instar-icon-off.png" alt="인스타그램 바로가기"></a></li>
+          <li><a href="#none"><img src="/images/headerFooter/footer/youtube-icon-off.png" alt="유튜브 바로가기"></a></li>
+        </ul>
+      </div>
+      <div class="footer-inner-bottom footer-inner">
+        <ul class="footer-bottom-info-list">
+          <li><a href="#none">대표자 : 비엠더블유코리아(주)</a></li>
+          <li><a href="#none">주소 : 서울시 중구 퇴계로 100(서울시 중구 회현동2가 스테이트타워 남산)</a></li>
+          <li><a href="#none">사업자등록번호 : 213-123-32123</a></li>
+          <li><a href="#none">전화 : 070-1234-5678</a></li>
+          <li><a href="#none">이메일 : bmw_cs@bmw.com</a></li>
+        </ul>
+        <div>
+        </div>
+  </footer>
+  <script src="/script/mainscript.js"></script>
 </body>
 
 </html>

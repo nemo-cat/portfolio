@@ -1,0 +1,267 @@
+/* header 영역 */
+header {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  /* background-color: #333; */
+  color: #fff;
+}
+
+.header-wrap {
+  height: 100px;
+}
+
+.header-inner {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  height: 100px;
+}
+
+.header-logo {
+  width: 10%;
+}
+
+.header-logo img {
+  display: block;
+  margin: 0 auto;
+}
+
+.gnb-main-menu {
+  width: 75%;
+}
+
+.main-menu-pc {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+
+.main-menu-pc a {
+  display: inline-block;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.header-ico-list {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  width: 15%;
+}
+
+.header-ico-list img {
+  height: 30px;
+}
+
+
+/* pc sub menu 영역 */
+/* .sub-menu-inner {
+  background-color: #fff;
+} */
+.sub-menu-wrap {
+  margin: 0;
+  background-color: #fff;
+  color: #333;
+}
+
+#sub-electricCar {
+  display: none;
+  flex-flow: column;
+}
+
+#sub-electricCar.active {
+  display: flex;
+}
+
+.sub-menu-title {
+  padding: 20px;
+  font-size: 18px;
+}
+
+.sub-electircCar-inner {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 20px;
+}
+
+.sub-electircCar-item {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  width: 25%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.sub-electircCar-item-title span {
+  display: block;
+  font-size: 12px;
+  color: #666;
+}
+
+.sub-electircCar-item-title span.new-sticker {
+  color: #fff;
+}
+
+.sub-electircCar-item-title h3 {
+  display: inline-block;
+  position: relative;
+}
+
+.new-sticker {
+  display: inline-block;
+  position: absolute;
+
+  padding: 5px;
+  background-color: #0066B1;
+}
+
+
+.sub-electircCar-item-img img {
+  width: 100%;
+}
+
+/* footer  영역 */
+footer {
+  padding: 50px 0;
+  background-color: #333;
+  font-size: 12px;
+  color: #f3f3f3;
+}
+
+.footer-wrap {
+  display: flex;
+  flex-flow: column;
+}
+
+.footer-inner {
+  display: flex;
+  flex-flow: row;
+}
+
+.footer-inner-top {
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.footer-top-info-list {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.footer-top-info {
+  display: flex;
+  flex-flow: column;
+}
+
+
+.footer-top-info span {
+  display: block;
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+.footer-top-info a {
+  display: block;
+  padding: 10px 0;
+}
+
+
+.footer-top-info a:hover {
+  text-decoration: underline;
+}
+
+.footer-top-sns-ico {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  width: 20%;
+}
+
+.footer-top-sns-ico a {
+  display: block;
+  padding: 20px;
+}
+
+.footer-inner-bottom {
+  display: flex;
+  flex-flow: column;
+}
+
+.footer-bottom-info-list a {
+  display: block;
+  padding: 5px 0;
+}
+
+@media all and (max-width:1023px) {
+
+  /* footer  영역 */
+  .footer-inner-top {
+    flex-flow: column;
+  }
+
+  .footer-top-info-list {
+    width: 100%;
+  }
+
+  .footer-top-sns-ico {
+    width: 100%;
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+
+  .footer-top-sns-ico li:first-child a {
+    padding-left: 0;
+  }
+}
+
+@media all and (max-width:767px) {
+
+  /* footer  영역 */
+  footer {
+    padding: 20px 0;
+  }
+
+  .footer-inner-top {
+    flex-flow: column;
+    margin-bottom: 20px;
+  }
+
+  .footer-top-info-list {
+    width: 100%;
+    flex-flow: row wrap;
+  }
+
+  .footer-top-info {
+    width: 50%;
+  }
+
+  .footer-top-info span {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-top-info li {
+    display: none;
+  }
+
+  .footer-top-sns-ico {
+    width: 100%;
+    justify-content: center;
+    margin-top: 0;
+  }
+
+  .footer-top-sns-ico li:first-child a {
+    padding-left: 0;
+  }
+
+  /*  .footer-bottom-info-list {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  } */
+}
