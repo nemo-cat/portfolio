@@ -1,0 +1,1 @@
+const sw1 = new Swiper('.swiper-wrapper')
